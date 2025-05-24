@@ -1,0 +1,104 @@
+{
+  "trustSection": {
+    "header": {
+      "title": "Why Clients ",
+      "brandName": "Kinseb Web Development"
+    },
+    "services": [
+      {
+        "id": 1,
+        "title": "Web Design",
+        "heading": "Unique designs tailored to your brand's identity",
+        "description": "We handcraft every website to reflect your vision and values — no templates, no shortcuts. A custom experience that enhances brand recognition and drives real results.",
+        "features": [
+          "100% custom, no cookie-cutter layouts",
+          "Designed for conversion & engagement",
+          "Strengthens your brand's digital identity"
+        ],
+        "image": "/images/3.jpg",
+        "imageAlt": "Custom Web Design Mockups showing tailored websites for unique brand identities"
+      },
+      {
+        "id": 2,
+        "title": "Responsive\nWeb Design",
+        "heading": "Seamless experiences across all devices",
+        "description": "Your website will look and function flawlessly on every screen size. We build with a mobile-first approach that ensures perfect performance from smartphones to desktops.",
+        "features": [
+          "Automatically adapts to any screen size",
+          "Fast loading on mobile devices",
+          "Touch-optimized navigation and buttons"
+        ],
+        "image": "/images/1.jpg",
+        "imageAlt": "Responsive Web Design Mockups showing website adaptability across desktop, tablet, and mobile devices"
+      },
+      {
+        "id": 3,
+        "title": "Website\nRedesign",
+        "heading": "Transform your outdated site into a modern masterpiece",
+        "description": "Breathe new life into your online presence with our complete redesign services. We'll preserve what works while upgrading everything else to meet today's standards and expectations.",
+        "features": [
+          "Preserves your brand while modernizing design",
+          "Improves user experience and engagement",
+          "Implements latest web technologies"
+        ],
+        "image": "/images/2.jpg",
+        "imageAlt": "Website Redesign Mockups showing before and after transformation of outdated websites"
+      },
+      {
+        "id": 4,
+        "title": "Search Engine\nOptimization",
+        "heading": "Climb search rankings with data-driven SEO",
+        "description": "Get found by the right people at the right time. Our SEO strategies are built into every site we create, ensuring your business gains visibility in an increasingly competitive digital landscape.",
+        "features": [
+          "Technical SEO best practices built-in",
+          "Keyword research and on-page optimization",
+          "Improved site structure and performance"
+        ],
+        "image": "/images/5.jpg",
+        "imageAlt": "SEO Mockups showing improved search rankings and analytics dashboards for website visibility"
+      },
+      {
+        "id": 12,
+        "title": "eCommerce\nStorefronts",
+        "heading": "Sell more with conversion-focused online stores",
+        "description": "Turn browsers into buyers with our custom eCommerce solutions. We create intuitive shopping experiences that make purchasing effortless and keep customers coming back.",
+        "features": [
+          "Streamlined checkout process",
+          "Product showcases that drive sales",
+          "Secure payment processing integration"
+        ],
+        "image": "/images/6.jpg",
+        "imageAlt": "eCommerce Storefronts Mockups displaying user-friendly shopping interfaces and checkout processes"
+      },
+      {
+        "id": 13,
+        "title": "UI/UX\nDesign",
+        "heading": "Creating intuitive interfaces that delight users and drive engagement",
+        "description": "Our UI/UX design services focus on creating intuitive, enjoyable digital experiences that satisfy users and achieve business goals through research-driven design.",
+        "features": [
+          "User-centered design approach",
+          "Data-driven design decisions",
+          "Conversion optimization focus"
+        ],
+        "image": "/images/ui-ux-design.jpg",
+        "imageAlt": "UI/UX Design Mockups showing intuitive interfaces and user experience optimization"
+      }
+    ],
+    "metadata": {
+      "seo": {
+        "title": "Professional Web Development Services | Kinseb Web Development",
+        "description": "Kinseb Web Development offers custom web design, responsive websites, redesigns, SEO, and eCommerce solutions that clients trust. Transform your online presence today.",
+        "keywords": "web development, custom web design, responsive design, website redesign, SEO, eCommerce websites",
+        "canonicalUrl": "https://www.kinseb.com/services"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kinseb Web Development",
+        "url": "https://www.kinseb.com/",
+        "logo": "https://www.kinseb.com/logo.png",
+        "description": "Professional web development services including custom design, responsive websites, redesigns, SEO, and eCommerce solutions."
+      }
+    }
+  }
+}

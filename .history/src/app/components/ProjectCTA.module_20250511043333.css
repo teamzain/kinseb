@@ -1,0 +1,191 @@
+/* Base container with proper aspect ratio and positioning */
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  isolation: isolate; /* Create a new stacking context */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skeleton loader with dominant color from image */
+.backgroundSkeleton {
+  position: absolute;
+  inset: 0;
+  background-color: #04091D; /* Dark color matching image theme */
+  z-index: -2;
+}
+
+/* Background image container */
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.backgroundImage.loaded {
+  opacity: 1;
+}
+
+/* Background overlay for better text contrast */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(4, 9, 29, 0.08) 62.29%, rgba(4, 9, 29, 0.4) 100%), 
+              linear-gradient(0deg, rgba(0, 0, 0, 0.6) -15.43%, rgba(0, 0, 0, 0) 123.66%);
+  pointer-events: none;
+}
+
+/* Content container */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Main heading */
+.heading {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  width: 100%;
+  max-width: 1136px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Subheading text */
+.subheading {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0 0 1.5rem 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  line-height: 1.4;
+  width: 100%;
+  max-width: 1136px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.15s;
+}
+
+/* Highlighted text */
+.highlight {
+  color: #0D98BA;
+}
+
+/* Button container for animation purposes */
+.buttonContainer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.3s;
+}
+
+/* Button styles */
+.button {
+  font-family: var(--font-lato);
+  background: #0D98BA;
+  border: 2px solid #0D98BA;
+  border-radius: 6px;
+  padding: 0.75rem 1.875rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #04091D;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease-out;
+  will-change: transform;
+}
+
+/* Button hover state */
+.button.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(13, 152, 186, 0.4);
+}
+
+/* Animation classes */
+.heading.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subheading.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.buttonContainer.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 768px) {
+  .container {
+    min-height: 300px;
+    padding: 2.5rem 1rem;
+  }
+  
+  .heading {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+  
+  .subheading {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    margin-bottom: 1.25rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-height: 250px;
+    padding: 2rem 0.75rem;
+  }
+  
+  .heading {
+    font-size: 1.75rem;
+  }
+  
+  .subheading {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Make button more tappable on mobile */
+  .button {
+    padding: 0.8rem 1.75rem;
+    min-width: 160px;
+    touch-action: manipulation;
+  }
+}

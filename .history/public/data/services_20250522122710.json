@@ -1,0 +1,696 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Website Design Services",
+      "description": "Creating sleek, strategic websites tailored to your brand.",
+      "longDescription": "Our website design services focus on creating visually stunning, functionally superior websites that align perfectly with your brand identity. We combine modern aesthetics with strategic UX principles to ensure your site not only looks great but also drives conversions.",
+      "price": "$1,500 - $5,000",
+      "duration": "3-6 weeks",
+      "featured": true,
+      "image": "/images/website-design.jpg",
+      "deliverables": [
+        "Custom responsive design",
+        "User experience strategy",
+        "Content strategy consultation",
+        "SEO-friendly architecture",
+        "Browser compatibility testing"
+      ],
+      "process": [
+        "Discovery and strategy",
+        "Wireframing",
+        "Visual design",
+        "Development",
+        "Testing and launch"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our expert designers create custom websites with tailored UX/UI and SEO to drive traffic and conversions. We build unique designs featuring branded animations for enhanced visibility and engagement."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our expert designers create custom websites with tailored UX/UI and SEO to drive traffic and conversions. We build unique designs featuring branded animations for enhanced visibility and engagement."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing website with modern design principles, improved user experience, and enhanced performance to attract and retain more visitors."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused online stores with intuitive product navigation, secure checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Website Redesign",
+      "description": "Revamping outdated sites into modern, high-performing platforms.",
+      "longDescription": "Transform your outdated website into a modern, high-performing digital platform. Our redesign process begins with a comprehensive analysis of your current site's strengths and weaknesses, followed by strategic improvements to aesthetics, functionality, and user experience.",
+      "price": "$2,000 - $6,000",
+      "duration": "4-8 weeks",
+      "image": "/images/website-redesign.jpg",
+      "deliverables": [
+        "Comprehensive site audit",
+        "Content migration",
+        "New responsive design",
+        "Performance optimization",
+        "Analytics implementation"
+      ],
+      "process": [
+        "Site audit and analysis",
+        "Strategy development",
+        "Design concepts",
+        "Development and migration",
+        "Testing and launch"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We transform outdated websites into modern, high-performing digital platforms with a comprehensive redesign strategy focused on user experience and conversion optimization."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our website redesign process analyzes your current site's strengths and weaknesses, implementing strategic improvements that enhance both aesthetics and functionality."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing website with modern design principles, improved user experience, and enhanced performance to attract and retain more visitors."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused online stores with intuitive product navigation, secure checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Web App Design",
+      "description": "Designing intuitive web apps focused on user experience.",
+      "longDescription": "We create intuitive, powerful web applications with a focus on exceptional user experiences. Our web app design process integrates sophisticated UI/UX principles with technical feasibility to deliver solutions that are both beautiful and functional.",
+      "price": "$3,000 - $10,000",
+      "duration": "6-12 weeks",
+      "image": "/images/web-app-design.jpg",
+      "deliverables": [
+        "User flow diagrams",
+        "Interactive prototypes",
+        "UI component library",
+        "Design system documentation",
+        "Developer handoff assets"
+      ],
+      "process": [
+        "Research and requirements gathering",
+        "Information architecture",
+        "Wireframing and prototyping",
+        "Visual design",
+        "User testing and refinement"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We create intuitive, powerful web applications that seamlessly blend sophisticated UI/UX principles with technical feasibility, delivering solutions that are both beautiful and functional."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our web app design process integrates user research, information architecture, and interactive prototyping to create engaging digital experiences that solve complex problems."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing web application with modern design principles, improved user experience, and enhanced performance to attract and retain more users."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused online stores with intuitive product navigation, secure checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Mobile App Design",
+      "description": "Crafting beautiful, functional apps for mobile-first users.",
+      "longDescription": "Our mobile app design services focus on creating engaging, intuitive experiences for iOS and Android platforms. We emphasize performance, usability, and delight to ensure your app stands out in crowded marketplaces while delivering genuine value to users.",
+      "price": "$3,500 - $12,000",
+      "duration": "6-14 weeks",
+      "image": "/images/mobile-app-design.jpg",
+      "deliverables": [
+        "Platform-specific UI designs",
+        "Interactive prototypes",
+        "Animation specifications",
+        "Design system",
+        "Developer-ready assets"
+      ],
+      "process": [
+        "Market research",
+        "User journey mapping",
+        "Wireframing",
+        "UI design",
+        "Prototype testing",
+        "Refinement"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our mobile app design services create engaging, intuitive experiences for iOS and Android platforms that emphasize performance, usability, and delight."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We design mobile applications that stand out in crowded marketplaces while delivering genuine value to users through thoughtful interaction design and visual appeal."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing mobile application with modern design principles, improved user experience, and enhanced performance to attract and retain more users."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused mobile shopping experiences with intuitive product navigation, secure checkout processes, and responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Branding",
+      "description": "Building powerful brand identities that truly connect.",
+      "longDescription": "Our comprehensive branding services help establish meaningful connections between your business and your audience. We develop cohesive brand identities that communicate your values, differentiate you from competitors, and build lasting impressions with your target market.",
+      "price": "$2,500 - $8,000",
+      "duration": "4-8 weeks",
+      "image": "/images/branding.jpg",
+      "deliverables": [
+        "Brand strategy document",
+        "Logo design",
+        "Color palette",
+        "Typography system",
+        "Brand guidelines",
+        "Stationery design"
+      ],
+      "process": [
+        "Discovery and research",
+        "Strategy development",
+        "Visual identity creation",
+        "Applications and guidelines",
+        "Brand launch support"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our comprehensive branding services establish meaningful connections between your business and audience through cohesive brand identities that communicate your values."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We develop strategic brand systems that differentiate you from competitors and build lasting impressions with your target market through consistent visual and verbal identity."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing brand with modern design principles, improved market positioning, and enhanced visual identity to attract and retain more customers."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused brand experiences for e-commerce that strengthen customer loyalty and drive sales through cohesive visual identities."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Logo Design",
+      "description": "Iconic, memorable logos that define your brand instantly.",
+      "longDescription": "We create distinctive, versatile logos that instantly communicate your brand's essence. Our logo design process emphasizes simplicity, memorability, and strategic alignment with your brand positioning to ensure your mark stands the test of time.",
+      "price": "$800 - $3,000",
+      "duration": "2-4 weeks",
+      "image": "/images/logo-design.jpg",
+      "deliverables": [
+        "Multiple concept options",
+        "Finalized vector logo",
+        "Color variations",
+        "File formats for all uses",
+        "Usage guidelines"
+      ],
+      "process": [
+        "Discovery and research",
+        "Concept development",
+        "Refinement",
+        "Finalization",
+        "Delivery of assets"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We create distinctive, versatile logos that instantly communicate your brand's essence through strategic design that emphasizes simplicity and memorability."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our logo design process ensures your visual mark stands the test of time through strategic alignment with your brand positioning and comprehensive application testing."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing logo with modern design principles, improved versatility, and enhanced recognition to strengthen your brand presence."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused logo designs that build trust and recognition across digital storefronts and product packaging."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Brand Identity",
+      "description": "Unified brand visuals for consistent, lasting impressions.",
+      "longDescription": "Develop a comprehensive visual language that consistently represents your brand across all touchpoints. Our brand identity services create cohesive systems of visual elements that work together to establish recognition and build equity in your brand.",
+      "price": "$2,000 - $6,000",
+      "duration": "3-6 weeks",
+      "image": "/images/brand-identity.jpg",
+      "deliverables": [
+        "Logo system",
+        "Color palette",
+        "Typography selection",
+        "Imagery style guide",
+        "Pattern/texture library",
+        "Comprehensive brand guidelines"
+      ],
+      "process": [
+        "Brand audit",
+        "Visual strategy",
+        "Element development",
+        "System creation",
+        "Guidelines documentation"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Develop a comprehensive visual language that consistently represents your brand across all touchpoints, from digital interfaces to physical materials."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our brand identity services create cohesive systems of visual elements that work together to establish recognition and build equity in your brand over time."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing brand identity with modern design principles, improved consistency, and enhanced visual coherence to strengthen market presence."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused brand identity systems that build trust and recognition throughout the customer journey in online stores."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Graphic Design",
+      "description": "Engaging graphics that amplify your brand's message.",
+      "longDescription": "Our graphic design services create compelling visual content that communicates effectively while reinforcing your brand identity. From marketing materials to social media assets, we produce high-impact designs that capture attention and drive engagement.",
+      "price": "$500 - $2,000",
+      "duration": "1-3 weeks",
+      "image": "/images/graphic-design.jpg",
+      "deliverables": [
+        "Print-ready files",
+        "Digital assets",
+        "Source files",
+        "Usage recommendations"
+      ],
+      "process": [
+        "Requirement definition",
+        "Concept development",
+        "Design creation",
+        "Review and refinement",
+        "Final delivery"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our graphic design services create compelling visual content that communicates effectively while reinforcing your brand identity across all marketing materials."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We produce high-impact designs that capture attention and drive engagement through strategic use of typography, imagery, color, and composition."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing graphic materials with modern design principles, improved visual hierarchy, and enhanced brand consistency."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused graphic designs for product photography, promotional banners, and digital marketing that drive sales in online stores."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Custom Website Design",
+      "description": "Tailor-made websites built around your unique goals.",
+      "longDescription": "Our custom website design service creates unique digital experiences specifically tailored to your business goals and audience needs. We focus on differentiating your brand with distinctive design elements while ensuring optimal functionality and user experience.",
+      "price": "$3,000 - $10,000",
+      "duration": "5-10 weeks",
+      "image": "/images/custom-website-design.jpg",
+      "deliverables": [
+        "Custom page designs",
+        "Unique interaction patterns",
+        "Bespoke visual elements",
+        "Responsive behavior specifications",
+        "Complete front-end development"
+      ],
+      "process": [
+        "Discovery workshops",
+        "Strategic planning",
+        "Custom design development",
+        "Front-end implementation",
+        "CMS integration",
+        "Launch and optimization"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our custom website design service creates unique digital experiences specifically tailored to your business goals and audience needs with distinctive design elements."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We focus on differentiating your brand online through bespoke visual elements and interaction patterns while ensuring optimal functionality and user experience."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing website with custom design principles, improved user experience, and enhanced brand differentiation to stand out from competitors."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused custom online stores with unique product showcases, distinctive checkout processes, and brand-aligned shopping experiences."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Shopify Website Design",
+      "description": "High-converting Shopify stores with custom design solutions.",
+      "longDescription": "We create beautiful, high-converting Shopify stores that showcase your products effectively. Our Shopify design service combines aesthetic appeal with e-commerce best practices to maximize conversions while providing seamless shopping experiences.",
+      "price": "$2,500 - $8,000",
+      "duration": "4-8 weeks",
+      "image": "/images/shopify-design.jpg",
+      "deliverables": [
+        "Custom theme design",
+        "Product page optimization",
+        "Checkout customization",
+        "Mobile optimization",
+        "App integration",
+        "Launch support"
+      ],
+      "process": [
+        "Store planning",
+        "Theme customization",
+        "Product setup",
+        "Payment configuration",
+        "Testing",
+        "Launch and training"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We create beautiful, high-converting Shopify stores that showcase your products effectively through custom theme designs and strategic page layouts."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our Shopify design service combines aesthetic appeal with e-commerce best practices to maximize conversions while providing seamless shopping experiences."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing Shopify store with modern design principles, improved conversion optimization, and enhanced product showcases to increase sales."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused Shopify stores with intuitive navigation, streamlined checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "WordPress Web Design",
+      "description": "Flexible, user-friendly WordPress sites that grow with you.",
+      "longDescription": "Our WordPress design services deliver custom, content-focused websites that are easy to maintain and update. We create WordPress solutions that balance beautiful design with administrative simplicity, ensuring your site remains current with minimal effort.",
+      "price": "$2,000 - $7,000",
+      "duration": "3-8 weeks",
+      "image": "/images/wordpress-design.jpg",
+      "deliverables": [
+        "Custom WordPress theme",
+        "Optimized page templates",
+        "Content management setup",
+        "Plugin configuration",
+        "Admin training",
+        "SEO foundation"
+      ],
+      "process": [
+        "Requirements gathering",
+        "Design conceptualization",
+        "Theme development",
+        "Content integration",
+        "Plugin setup",
+        "Training and launch"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our WordPress design services deliver custom, content-focused websites that are easy to maintain and update through thoughtful theme development."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We create WordPress solutions that balance beautiful design with administrative simplicity, ensuring your site remains current with minimal effort."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing WordPress site with modern design principles, improved content organization, and enhanced performance to elevate your online presence."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused WordPress online stores with WooCommerce integration, product showcases, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "eCommerce Web Design",
+      "description": "Driving sales with stunning, conversion-focused store designs.",
+      "longDescription": "We design e-commerce experiences that balance aesthetic appeal with proven conversion principles. Our e-commerce design services focus on creating trustworthy, user-friendly online stores that guide visitors smoothly from product discovery to purchase completion.",
+      "price": "$3,000 - $12,000",
+      "duration": "6-12 weeks",
+      "image": "/images/ecommerce-design.jpg",
+      "deliverables": [
+        "Conversion-optimized store design",
+        "Product catalog setup",
+        "Payment gateway integration",
+        "Shipping configuration",
+        "Inventory management system",
+        "Analytics implementation"
+      ],
+      "process": [
+        "E-commerce strategy",
+        "Platform selection",
+        "UX/UI design",
+        "Development and integration",
+        "Product upload",
+        "Testing and launch"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We design e-commerce experiences that balance aesthetic appeal with proven conversion principles to transform visitors into loyal customers."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our e-commerce design services focus on creating trustworthy, user-friendly online stores that guide visitors smoothly from product discovery to purchase completion."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing online store with modern design principles, improved conversion pathways, and enhanced product showcases to increase sales."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused online stores with intuitive product navigation, secure checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "UI/UX Design",
+      "description": "Creating intuitive interfaces that delight users and drive engagement.",
+      "longDescription": "Our UI/UX design services focus on creating intuitive, enjoyable digital experiences that satisfy users and achieve business goals. We combine user research, interaction design, and visual aesthetics to build interfaces that feel natural, efficient, and delightful.",
+      "price": "$2,500 - $9,000",
+      "duration": "4-10 weeks",
+      "featured": true,
+      "image": "/images/ui-ux-design.jpg",
+      "deliverables": [
+        "User research findings",
+        "Information architecture",
+        "Wireframes",
+        "Interactive prototypes",
+        "UI design system",
+        "Usability testing reports"
+      ],
+      "process": [
+        "User research",
+        "Information architecture",
+        "Wireframing",
+        "Prototyping",
+        "Visual design",
+        "Usability testing"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our UI/UX design services focus on creating intuitive, enjoyable digital experiences that satisfy users and achieve business goals through research-driven design."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We combine user research, interaction design, and visual aesthetics to build interfaces that feel natural, efficient, and delightful for all users."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing digital interfaces with modern UX principles, improved usability, and enhanced interaction design to increase user satisfaction."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused UX/UI for e-commerce that simplifies product discovery, streamlines checkout flows, and enhances overall shopping experiences."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Design Systems",
+      "description": "Building scalable design frameworks for consistent digital experiences.",
+      "longDescription": "We create comprehensive design systems that ensure consistency across your digital products while accelerating development. Our design system services establish reusable components, clear guidelines, and scalable frameworks that evolve with your business needs.",
+      "price": "$5,000 - $15,000",
+      "duration": "6-14 weeks",
+      "image": "/images/design-systems.jpg",
+      "deliverables": [
+        "Component library",
+        "Style guide",
+        "Design principles documentation",
+        "Usage guidelines",
+        "Code snippets",
+        "Design tokens"
+      ],
+      "process": [
+        "Inventory and audit",
+        "Design principles definition",
+        "Component design",
+        "Documentation",
+        "Implementation support",
+        "Governance planning"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "We create comprehensive design systems that ensure consistency across your digital products while accelerating development through reusable components."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "Our design system services establish clear guidelines and scalable frameworks that evolve with your business needs and maintain brand coherence."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing design language with modern system architecture, improved component libraries, and enhanced documentation for better scale."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused design systems for e-commerce that maintain consistency while optimizing for sales across product pages and checkout flows."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "E-commerce Design",
+      "description": "Crafting high-converting online stores that drive sales and growth.",
+      "longDescription": "Our e-commerce design services focus on creating shopping experiences that convert browsers into buyers. We emphasize clear product presentation, streamlined checkout processes, and strategic upselling opportunities to maximize revenue while maintaining excellent user experiences.",
+      "price": "$3,500 - $12,000",
+      "duration": "6-12 weeks",
+      "image": "/images/e-commerce-design.jpg",
+      "deliverables": [
+        "Store design mockups",
+        "Shopping cart optimization",
+        "Product page templates",
+        "Category structure",
+        "Mobile shopping experience",
+        "Conversion tracking setup"
+      ],
+      "process": [
+        "Competitive analysis",
+        "Shopping flow design",
+        "Interface development",
+        "Payment integration",
+        "Performance optimization",
+        "Conversion testing"
+      ],
+      "faq": [
+        {
+          "id": "section1",
+          "title": "Custom Web Design",
+          "description": "Our e-commerce design services focus on creating shopping experiences that convert browsers into buyers through strategic interface design."
+        },
+        {
+          "id": "section2",
+          "title": "Custom Web Design",
+          "description": "We emphasize clear product presentation, streamlined checkout processes, and strategic upselling opportunities to maximize revenue while maintaining excellent user experiences."
+        },
+        {
+          "id": "section3",
+          "title": "Website Redesign",
+          "description": "Refresh your existing online store with modern e-commerce principles, improved conversion funnels, and enhanced mobile shopping experiences."
+        },
+        {
+          "id": "section4",
+          "title": "eCommerce Web Design",
+          "description": "Create conversion-focused online stores with intuitive product navigation, secure checkout processes, and mobile-responsive designs that drive sales."
+        }
+      ]
+    }
+  ]
+}

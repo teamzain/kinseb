@@ -1,0 +1,8 @@
+'use client';
+
+import React from 'react';
+import SEOServices from './../components/SEOService';
+
+export default function SEOServicesPage() {
+  return <SEOServices />;
+}

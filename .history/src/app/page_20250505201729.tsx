@@ -1,0 +1,22 @@
+import Head from "next/head";
+import HeroSection from "./components/HeroSection";
+// import TechStackMarquee from "./components/Marquee";
+// import BusinessServices from "./components/BusinnessService";
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Kinseb Web Development | Websites That Drive Growth</title>
+        <meta name="description" content="We build responsive, SEO-optimized websites for businesses of all sizes" />
+        <link rel="icon" href="/images/logo.svg" />
+      </Head>
+
+      <main>
+        <HeroSection />
+        {/* <TechStackMarquee /> */}
+        {/* <BusinessServices /> */}
+      </main>
+    </>
+  );
+}

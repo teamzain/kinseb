@@ -1,0 +1,40 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth page transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply to body for global fade effect */
+body {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Video background preloading */
+video {
+  will-change: opacity;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* No flickering during image/video load */
+img, video {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.loaded, video.loaded {
+  opacity: 1;
+}

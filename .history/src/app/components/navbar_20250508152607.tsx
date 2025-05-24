@@ -1,0 +1,1254 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+
+// Define an interface for navigation links
+interface NavigationLink {
+  href: string;
+  label: string;
+  id: string;
+  icon?: string;
+  hasDropdown?: boolean;
+  dropdownItems?: {href: string, label: string}[];
+}
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('home');
+  const [mounted, setMounted] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  // Fix hydration issues by only rendering client-side
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = (id: string) => {
+    if (openDropdown === id) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(id);
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (!mounted) return;
+
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen, mounted]);
+
+  // Fix TypeScript error by specifying the parameter type
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+    setIsMenuOpen(false);
+    setOpenDropdown(null);
+  };
+
+  // Add class to body when menu is open to control z-index
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [isMenuOpen]);
+
+  // Reset dropdown when menu closes
+  useEffect(() => {
+    if (!isMenuOpen) {
+      setOpenDropdown(null);
+    }
+  }, [isMenuOpen]);
+
+  // Don't render until client-side to prevent hydration errors
+  if (!mounted) {
+    return null;
+  }
+
+  // Navigation links for SEO and DRY code
+  const navigationLinks: NavigationLink[] = [
+    { href: "/", label: "Home", id: "home", icon: "/images/home.svg" },
+    { 
+      href: "/services", 
+      label: "Services", 
+      id: "services", 
+      icon: "/images/service.svg",
+      hasDropdown: true,
+      dropdownItems: [
+        { href: "/services/web-development", label: "Web Development" },
+        { href: "/services/app-development", label: "App Development" },
+        { href: "/services/ui-ux-design", label: "UI/UX Design" },
+        { href: "/services/digital-marketing", label: "Digital Marketing" }
+      ]
+    },
+    { href: "/portfolio", label: "Portfolio", id: "portfolio", icon: "/images/portfolio.svg" },
+    { href: "/about", label: "About", id: "about", icon: "/images/about.svg" },
+    { href: "/contact", label: "Contact", id: "contact", icon: "/images/contact.svg" }
+  ];
+
+  // Social media links
+  const socialLinks = [
+    { href: "https://twitter.com", icon: "/images/twitter.svg", label: "Twitter" },
+    { href: "https://facebook.com", icon: "/images/facebook.svg", label: "Facebook" },
+    { href: "https://instagram.com", icon: "/images/insta.svg", label: "Instagram" },
+    { href: "https://linkedin.com", icon: "/images/linkedin.svg", label: "LinkedIn" }
+  ];
+
+  return (
+    <>
+      <Head>
+        {/* Preconnect to font domain for improved performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload critical fonts */}
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" />
+      </Head>
+
+      <style jsx global>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          overflow-x: hidden;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        /* Hamburger styling - FIXED for no shaking */
+        .hamburger {
+          width: 24px;
+          height: 18px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .hamburger-line {
+          display: block;
+          width: 24px;
+          height: 2px;
+          background-color: #809B0D;
+          border-radius: 1px;
+          transition: all 0.3s ease;
+          transform-origin: center;
+        }
+
+        /* Middle line shorter */
+        .hamburger-line:nth-child(2) {
+          width: 16px;
+          margin-left: auto;
+          transition: all 0.3s ease;
+        }
+
+        /* Fixed hamburger hover animation */
+        .mobile-menu-toggle:hover .hamburger-line:nth-child(2),
+        .hamburger-container:hover .hamburger-line:nth-child(2) {
+          width: 20px;
+        }
+
+        .navbar {
+          background-color: #091135;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+        }
+
+        .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.2rem 2.8rem;
+          max-width: 1400px;
+          margin: 0 auto;
+        }
+
+        .logo-container {
+          display: flex;
+          align-items: center;
+          z-index: 1001;
+          margin-left: -70px;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .logo-container img {
+          transition: transform 0.3s ease;
+          width: 190px !important;
+          height: auto !important;
+          object-fit: contain;
+        }
+
+        .logo-container:hover img {
+          transform: translateY(-2px);
+        }
+
+        .button-container {
+          display: flex;
+          align-items: center;
+          margin-right: -70px;
+          margin-left: auto;
+        }
+
+        /* Button styling */
+        .quote-button {
+          background-color: #0D98BA;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          font-family: 'Barlow', sans-serif;
+          border-radius: 6px;
+          font-size: 0.95rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          display: inline-block;
+          white-space: nowrap;
+          box-shadow: 0 4px 6px rgba(13, 152, 186, 0.2);
+          letter-spacing: 0.3px;
+          font-family: 'Barlow', sans-serif;
+          margin-right: 20px;
+        }
+
+        .quote-button:hover {
+          background-color: #0B8DAD;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 12px rgba(13, 152, 186, 0.3);
+        }
+
+        /* Mobile menu toggle button with hamburger */
+        .mobile-menu-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 990;
+          margin-left: auto;
+          margin-right: 10px;
+          background-color: #1A1A1A;
+          border-radius: 6px;
+          width: 48px;
+          height: 48px;
+          position: relative;
+          transition: all 0.3s ease;
+          overflow: hidden;
+        }
+
+        .mobile-menu-toggle:hover {
+          background-color: #222222;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-menu-toggle:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at center, rgba(128, 155, 13, 0.2) 0%, transparent 70%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover:after {
+          opacity: 1;
+        }
+
+        .hamburger-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 990;
+          margin-left: auto;
+          margin-right: 10px;
+          background-color: #1A1A1A;
+          border-radius: 6px;
+          width: 48px;
+          height: 48px;
+          position: relative;
+          transition: all 0.3s ease;
+          overflow: hidden;
+        }
+
+        .hamburger-container:hover {
+          background-color: #222222;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hamburger-container:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at center, rgba(128, 155, 13, 0.2) 0%, transparent 70%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .hamburger-container:hover:after {
+          opacity: 1;
+        }
+
+        /* Fixed Hamburger to X animation - prevent shaking */
+        .hamburger.active .hamburger-line:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+          width: 24px;
+        }
+
+        .hamburger.active .hamburger-line:nth-child(2) {
+          opacity: 0;
+          transform: translateX(20px);
+          width: 24px;
+        }
+
+        .hamburger.active .hamburger-line:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+          width: 24px;
+        }
+
+        /* Menu panel - Fixed width to exactly 400px */
+        .menu-side {
+          position: fixed;
+          top: 0;
+          right: -400px;
+          width: 400px;
+          height: 100vh;
+          background-color: #050922;
+          z-index: 1000;
+          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          padding: 2.5rem 2.5rem 2.5rem;
+        }
+
+        .menu-side.open {
+          transform: translateX(-400px);
+        }
+
+        /* Close button in menu - positioned in line with logo */
+        .menu-close {
+          border: none;
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+          z-index: 2;
+          background: rgba(13, 152, 186, 0.1);
+        }
+
+        .menu-close:hover {
+          transform: rotate(90deg);
+          background-color: rgba(13, 152, 186, 0.2);
+        }
+
+        /* Menu header with logo and close button in one row */
+        .menu-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+          width: 100%;
+        }
+
+        /* Menu logo styling - in line with close button */
+        .menu-logo {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Menu content structure */
+        .menu-content {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .menu-links {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 1.5rem 0;
+        }
+
+        .menu-item {
+          margin: 0.5rem 0;  /* Increased gap between nav links */
+          opacity: 0;
+          transform: translateX(30px);
+          transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .menu-side.open .menu-item {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        .menu-side.open .menu-item:nth-child(1) { transition-delay: 0.1s; }
+        .menu-side.open .menu-item:nth-child(2) { transition-delay: 0.17s; }
+        .menu-side.open .menu-item:nth-child(3) { transition-delay: 0.24s; }
+        .menu-side.open .menu-item:nth-child(4) { transition-delay: 0.31s; }
+        .menu-side.open .menu-item:nth-child(5) { transition-delay: 0.38s; }
+
+        /* Menu links with icons */
+        .menu-link {
+          color: white;
+          text-decoration: none;
+          font-size: 1.05rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          padding: 0.6rem 0;  /* Increased padding for links */
+          letter-spacing: 0.5px;
+          position: relative;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        .menu-link-icon {
+          margin-right: 1rem;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.85;
+          transition: all 0.3s ease;
+        }
+
+        .menu-link:hover {
+          color: #00BCD4;
+          transform: translateX(5px);
+        }
+
+        .menu-link:hover .menu-link-icon {
+          opacity: 1;
+        }
+
+        .menu-link.active {
+          color: #00BCD4;
+        }
+
+        .menu-link.active .menu-link-icon {
+          opacity: 1;
+        }
+
+        .menu-link:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background-color: rgba(0, 188, 212, 0.5);
+          transition: width 0.3s ease;
+        }
+
+        .menu-link:hover:before {
+          width: 30px;
+        }
+
+        .menu-link.active:before {
+          width: 30px;
+          background-color: #00BCD4;
+        }
+
+        /* Dropdown Styles - IMPROVED */
+        .menu-link-with-dropdown {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          color: white;
+          text-decoration: none;
+          font-size: 1.05rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          padding: 0.6rem 0;
+          letter-spacing: 0.5px;
+          position: relative;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        .menu-link-with-dropdown .menu-link-text {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .menu-link-with-dropdown:hover {
+          color: #00BCD4;
+        }
+
+        .menu-link-with-dropdown.active {
+          color: #00BCD4;
+        }
+        
+        /* Arrow icon next to Services text - ADDED GAP */
+        .dropdown-icon {
+          display: inline-flex;
+          margin-left: 8px;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+        }
+        
+        /* Added space between Services text and dropdown arrow */
+        .dropdown-arrow {
+          margin-left: 10px;
+          transition: transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .menu-link-with-dropdown:hover .dropdown-arrow {
+          opacity: 1;
+        }
+
+        .dropdown-arrow.open {
+          transform: rotate(180deg);
+        }
+
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(13, 152, 186, 0.15);
+          border-radius: 4px;
+          width: 30px;
+          height: 30px;
+          margin-left: auto;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .dropdown-toggle:hover {
+          background-color: rgba(13, 152, 186, 0.25);
+        }
+
+        .dropdown-menu {
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          margin-left: 35px;
+          transition: max-height 0.5s ease, opacity 0.3s ease;
+        }
+
+        .dropdown-menu.open {
+          max-height: 500px;
+          opacity: 1;
+        }
+
+        .dropdown-item {
+          margin: 0.4rem 0;
+        }
+
+        .dropdown-link {
+          color: rgba(255, 255, 255, 0.85);
+          text-decoration: none;
+          font-size: 0.95rem;
+          font-weight: 400;
+          transition: all 0.3s ease;
+          display: block;
+          padding: 0.4rem 0;
+          position: relative;
+        }
+
+        .dropdown-link:hover {
+          color: #00BCD4;
+          transform: translateX(5px);
+        }
+
+        .dropdown-link:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background-color: rgba(0, 188, 212, 0.5);
+          transition: width 0.3s ease;
+        }
+
+        .dropdown-link:hover:before {
+          width: 20px;
+        }
+
+        /* Menu divider */
+        .menu-divider {
+          height: 2px;
+          background-color: #00BCD4;
+          margin: 1.5rem 0 2rem 0;  /* Increased top margin */
+          width: 100%;
+        }
+
+        /* Updated Newsletter section */
+        .menu-newsletter {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .menu-newsletter-title {
+          color: white;
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin-bottom: 1.2rem;
+          display: block;
+        }
+
+        /* Updated newsletter form to match the design */
+        .menu-newsletter-form {
+          position: relative;
+          width: 100%;
+          height: 67px;
+          background: rgba(36, 36, 36, 0.2);
+          border: 1px solid #262626;
+          backdrop-filter: blur(6px);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          padding: 0 30px;
+          margin-bottom: 1rem;
+        }
+
+        .menu-newsletter-input {
+          flex: 1;
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          height: 22px;
+          font-family: 'Barlow', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: #FFFFFF;
+          width: 100%;
+        }
+
+        .menu-newsletter-input::placeholder {
+          color: #98989A;
+        }
+
+        .menu-newsletter-input:focus {
+          outline: none;
+        }
+
+        .menu-newsletter-button {
+          position: absolute;
+          right: 16px;
+          width: 88px;
+          height: 45px;
+          background: #0D98BA;
+          border-radius: 6px;
+          border: none;
+          font-family: 'Barlow', sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 150%;
+          text-align: center;
+          color: #FFFFFF;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .menu-newsletter-button:hover {
+          background: #0B89A9;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(13, 152, 186, 0.3);
+        }
+
+        .menu-newsletter-text {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.85rem;
+          line-height: 1.5;
+          margin-top: 0.8rem;
+        }
+
+        /* Improved Social links */
+        .menu-social {
+          display: flex;
+          margin-top: 1.5rem;
+          gap: 1rem;
+        }
+
+        .menu-social-link {
+          color: white;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          background-color: rgba(255, 255, 255, 0.08);
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Improved hover effect for mobile */
+        .menu-social-link:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle at center, rgba(0, 188, 212, 0.4) 0%, transparent 70%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          transform: scale(0.8);
+        }
+
+        .menu-social-link:hover {
+          background-color: rgba(0, 188, 212, 0.15);
+          transform: translateY(-3px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-social-link:hover:before {
+          opacity: 0.8;
+          transform: scale(1);
+        }
+
+        /* Ensure social icons are visible */
+        .menu-social-link img {
+          width: 20px !important;
+          height: 20px !important;
+          filter: brightness(1.2);
+          position: relative;
+          z-index: 2;
+        }
+
+        /* Overlay - ensure it covers the navbar */
+        .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(5, 9, 34, 0.9);
+          z-index: 998;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+                      visibility 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+          backdrop-filter: blur(3px);
+        }
+
+        .overlay.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        /* Make navbar appear under overlay when menu is open */
+        .menu-open .navbar {
+          z-index: 997;
+        }
+
+        /* Hide main logo when menu is open - now for all screen sizes including laptop */
+        .menu-open .navbar .logo-container {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        @media (max-width: 1400px) {
+          .container {
+            padding: 1.1rem 3rem;
+          }
+          
+          .button-container {
+            margin-right: -60px;
+          }
+        }
+
+        /* Tablet view */
+        @media (max-width: 992px) {
+          .container {
+            padding: 1rem 2rem;
+          }
+          
+          .logo-container {
+            margin-left: -40px;
+          }
+          
+          .button-container {
+            margin-right: -40px;
+          }
+          
+          .quote-button {
+            padding: 0.65rem 1.2rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        /* Mobile view - IMPROVED */
+        @media (max-width: 768px) {
+          .container {
+            padding: 1rem 1.5rem;
+          }
+          
+          /* Menu keeps 400px width on mobile but shifts more */
+          .menu-side {
+            width: 400px;
+            right: -400px;
+            padding: 2rem 1.8rem;
+          }
+          
+          .menu-side.open {
+            transform: translateX(-400px);
+          }
+          
+          /* Improved header alignment */
+          .menu-header {
+            margin-bottom: 2.5rem;
+            justify-content: space-between;
+          }
+          
+          /* Redesigned close button for mobile */
+          .menu-close {
+            position: static;
+            margin-left: auto;
+            z-index: 1010;
+            background-color: rgba(13, 152, 186, 0.1);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+          }
+          
+          .menu-close:hover {
+            background-color: rgba(13, 152, 186, 0.2);
+            transform: rotate(90deg);
+          }
+          
+          /* Adjust logo size for mobile */
+          .logo-container img {
+            width: 160px !important;
+          }
+          
+          /* Adjust logo position on mobile */
+          .logo-container {
+            margin-left: -10px;
+          }
+          
+          /* Adjust hamburger position on mobile */
+          .button-container {
+            margin-right: -15px;
+          }
+          
+          /* Hide main navbar quote button on mobile */
+          .navbar .container .quote-button {
+            display: none !important;
+          }
+          
+          /* Adjust hamburger size on mobile */
+          .hamburger-container {
+            margin-right: 5px;
+          }
+          
+          .menu-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .menu-links {
+            flex: 1;
+          }
+
+          /* Enhanced mobile dropdown */
+          .dropdown-toggle {
+            width: 32px;
+            height: 32px;
+          }
+
+          /* Responsive newsletter on mobile */
+          .menu-newsletter-form {
+            height: 60px;
+            padding: 0 20px;
+          }
+          
+          .menu-newsletter-input {
+            font-size: 16px;
+          }
+          
+          .menu-newsletter-button {
+            width: 80px;
+            height: 40px;
+            right: 10px;
+            font-size: 13px;
+          }
+          
+          /* Enhanced mobile social links - Improved hover effects */
+          .menu-social {
+            gap: 1.2rem;
+            justify-content: center;
+          }
+          
+          .menu-social-link {
+            width: 46px;
+            height: 46px;
+          }
+          
+          /* Mobile-specific hover improvements */
+          .menu-social-link:before {
+            transform: scale(0.7);
+          }
+          
+          .menu-social-link:hover:before {
+            transform: scale(1.1);
+          }
+        }
+
+        /* For very small mobile screens, make menu full width */
+        @media (max-width: 420px) {
+          .menu-side {
+            width: 100%;
+            right: -100%;
+            padding: 1.8rem 1.5rem;
+          }
+          
+          .menu-side.open {
+            transform: translateX(-100%);
+          }
+          
+          /* Adjust close button position on small screens */
+          .menu-close {
+            margin-right: 0;
+            width: 40px;
+            height: 40px;
+          }
+          
+          /* Fixed cross icon size and centering for mobile */
+          .menu-close svg {
+            width: 22px;
+            height: 22px;
+          }
+          
+          /* Enhance menu items spacing on small screens */
+          .menu-links {
+            margin-top: 0.8rem;
+          }
+          
+          .menu-item {
+            margin: 0.7rem 0;
+          }
+          
+          /* Improved dropdown spacing for tiny screens */
+          .dropdown-arrow {
+            margin-left: 8px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 0.9rem 1.2rem;
+          }
+          
+          .hamburger-container {
+            width: 42px;
+            height: 42px;
+            margin-right: 0;
+          }
+          
+          /* Further adjust logo size for small screens */
+          .logo-container img {
+            width: 140px !important;
+          }
+          
+          .logo-container {
+            margin-left: -5px;
+          }
+          
+          .button-container {
+            margin-right: -10px;
+          }
+
+          /* Smaller newsletter on very small screens */
+          .menu-newsletter-form {
+            height: 55px;
+            padding: 0 15px;
+          }
+          
+          .menu-newsletter-button {
+            width: 70px;
+            height: 36px;
+            font-size: 12px;
+          }
+          
+          /* Improved hover circle effect on mobile */
+          .menu-social-link:hover:before {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+      `}</style>
+
+      <nav className="navbar" role="navigation" aria-label="Main Navigation">
+        <div className="container">
+          <div className="logo-container">
+            <Link href="/" aria-label="Homepage">
+              <Image 
+                src="/images/logo.svg" 
+                alt="Kinseb Web Development" 
+                width={190} 
+                height={188} 
+                priority
+              />
+            </Link>
+          </div>
+          
+          <div className="button-container">
+            {/* Show the Request A Quote button in main navbar */}
+            <Link href="/quote" className="quote-button" aria-label="Request A Quote">
+              Request A Quote
+            </Link>
+            
+            <div 
+              className="hamburger-container"
+              onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
+              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  toggleMenu();
+                }
+              }}
+            >
+              <div className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Side Menu - Updated to match the provided design */}
+        <div 
+          className={`menu-side ${isMenuOpen ? 'open' : ''}`}
+          aria-hidden={!isMenuOpen}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation Menu"
+        >
+          {/* Menu header with logo and close button in one row */}
+          <div className="menu-header">
+            <div className="menu-logo">
+              <Image 
+                src="/images/logo.svg" 
+                alt="Kinseb Web Development" 
+                width={180} 
+                height={50}
+                priority
+              />
+            </div>
+            
+            <button 
+              className="menu-close" 
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 6L6 16" stroke="#9ACA3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 6L16 16" stroke="#9ACA3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation links with icons and dropdowns */}
+          <ul className="menu-links">
+            {navigationLinks.map((link) => (
+              <li className="menu-item" key={link.id}>
+                {link.hasDropdown ? (
+                  <>
+                    <div 
+                      className={`menu-link menu-link-with-dropdown ${activeLink === link.id ? 'active' : ''}`}
+                      onClick={() => toggleDropdown(link.id)}
+                      aria-expanded={openDropdown === link.id}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          toggleDropdown(link.id);
+                        }
+                      }}
+                    >
+                      <span className="menu-link-icon">
+                        {link.icon && (
+                          <Image 
+                            src={link.icon} 
+                            alt={`${link.label} icon`} 
+                            width={24} 
+                            height={24} 
+                          />
+                        )}
+                      </span>
+                      {link.label}
+                      <span className={`dropdown-arrow ${openDropdown === link.id ? 'open' : ''}`}>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1.5L6 6.5L11 1.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+                    
+                    <div className={`dropdown-menu ${openDropdown === link.id ? 'open' : ''}`}>
+                      <ul>
+                        {link.dropdownItems?.map((item, index) => (
+                          <li className="dropdown-item" key={index}>
+                            <Link 
+                              href={item.href} 
+                              className="dropdown-link"
+                              onClick={() => handleLinkClick(link.id)}
+                              aria-label={item.label}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                ) : (
+                  <Link 
+                    href={link.href} 
+                    className={`menu-link ${activeLink === link.id ? 'active' : ''}`}
+                    onClick={() => handleLinkClick(link.id)}
+                    aria-label={link.label}
+                  >
+                    <span className="menu-link-icon">
+                      {link.icon && (
+                        <Image 
+                          src={link.icon} 
+                          alt={`${link.label} icon`} 
+                          width={24} 
+                          height={24} 
+                        />
+                      )}
+                    </span>
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <div className="menu-divider" aria-hidden="true"></div>
+
+          {/* Newsletter section */}
+          <div className="menu-newsletter">
+            <span className="menu-newsletter-title">Get updates</span>
+            
+            <form 
+              className="menu-newsletter-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // Handle newsletter subscription
+                console.log("Newsletter subscription");
+              }}
+            >
+              <input 
+                type="email" 
+                className="menu-newsletter-input" 
+                placeholder="Enter your email" 
+                aria-label="Email address for newsletter"
+                required
+              />
+              <button 
+                type="submit" 
+                className="menu-newsletter-button"
+                aria-label="Subscribe to newsletter"
+              >
+                Subscribe
+              </button>
+            </form>
+            
+            <p className="menu-newsletter-text">
+              By subscribing you agree to our Privacy Policy and provide consent to receive updates from our company.
+            </p>
+          </div>
+
+          {/* Social media links */}
+          <div className="menu-social">
+            {socialLinks.map((social, index) => (
+              <a 
+                key={index} 
+                href={social.href} 
+                className="menu-social-link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={social.label}
+              >
+                <Image 
+                  src={social.icon} 
+                  alt={social.label} 
+                  width={20} 
+                  height={20} 
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Overlay that appears when menu is open */}
+        <div 
+          className={`overlay ${isMenuOpen ? 'show' : ''}`} 
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        ></div>
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;

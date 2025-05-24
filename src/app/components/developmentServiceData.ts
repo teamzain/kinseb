@@ -1,0 +1,310 @@
+'use client';
+
+// Define types for development service data
+export interface DevelopmentServiceData {
+  id: number;
+  title: string;
+  description: string;
+  longDescription: string;
+  price: string;
+  duration: string;
+  featured?: boolean;
+  image?: string;
+  technologiesUsed: string[];
+  keyFeatures: string[];
+}
+
+// Fallback development service data
+const fallbackDevelopmentData: DevelopmentServiceData[] = [
+  {
+    id: 1,
+    title: 'Website Development',
+    description: 'Responsive, high-performing websites built for real results.',
+    longDescription: 'Our website development services deliver responsive, high-performing websites that engage users and drive conversions. We focus on clean code, optimal performance, and future-proof architecture to ensure your website is not just visually impressive but technically sound with robust functionality.',
+    price: '$3,000 - $10,000',
+    duration: '4-8 weeks',
+    featured: true,
+    technologiesUsed: [
+      'HTML5 & CSS3',
+      'JavaScript (ES6+)',
+      'React.js',
+      'Next.js',
+      'Responsive frameworks',
+      'Performance optimization tools'
+    ],
+    keyFeatures: [
+      'Mobile-first responsive design',
+      'Cross-browser compatibility',
+      'SEO-friendly architecture',
+      'Fast loading speeds',
+      'Content management integration',
+      'Analytics implementation'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Web App Development',
+    description: 'Scalable web applications tailored to your business needs.',
+    longDescription: 'We build powerful, scalable web applications designed to solve your specific business challenges. Our web app development approach focuses on user experience, performance, and maintainability, creating solutions that can grow with your business and adapt to changing requirements over time.',
+    price: '$8,000 - $25,000',
+    duration: '8-16 weeks',
+    technologiesUsed: [
+      'React.js',
+      'Angular',
+      'Vue.js',
+      'Node.js',
+      'Express',
+      'MongoDB/PostgreSQL',
+      'Firebase',
+      'AWS/Azure services'
+    ],
+    keyFeatures: [
+      'Custom functionality',
+      'User authentication and permissions',
+      'API integrations',
+      'Real-time data processing',
+      'Scalable architecture',
+      'Automated testing'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Custom Web Development',
+    description: 'Fully bespoke websites coded for flexibility and power.',
+    longDescription: 'When template solutions won\'t meet your unique requirements, our custom web development services deliver tailor-made solutions built from the ground up. We create completely customized websites with precisely the functionality, design, and user experience your business needs, without compromises.',
+    price: '$5,000 - $20,000',
+    duration: '6-12 weeks',
+    technologiesUsed: [
+      'PHP',
+      'Python',
+      'JavaScript frameworks',
+      'Custom CMS development',
+      'MySQL/PostgreSQL',
+      'Advanced front-end technologies'
+    ],
+    keyFeatures: [
+      'Completely custom design and functionality',
+      'Unique user interactions',
+      'Custom database architecture',
+      'Specialized integrations',
+      'Tailored admin interfaces',
+      'Bespoke content management'
+    ]
+  },
+  {
+    id: 4,
+    title: 'eCommerce Development',
+    description: 'Sales-driven online stores with seamless buying experiences.',
+    longDescription: 'Our eCommerce development services create online stores designed to maximize sales and provide exceptional shopping experiences. We focus on conversion optimization, secure payment processing, and creating intuitive interfaces that make it easy for customers to find and purchase products.',
+    price: '$4,000 - $15,000',
+    duration: '6-12 weeks',
+    technologiesUsed: [
+      'Shopify',
+      'WooCommerce',
+      'Magento',
+      'BigCommerce',
+      'Custom eCommerce solutions',
+      'Payment gateway integrations'
+    ],
+    keyFeatures: [
+      'Product catalog management',
+      'Secure checkout process',
+      'Multiple payment options',
+      'Inventory management',
+      'Order tracking',
+      'Customer account management',
+      'Mobile shopping experience'
+    ]
+  },
+  {
+    id: 5,
+    title: 'WooCommerce Development',
+    description: 'Robust WooCommerce solutions for WordPress-based stores.',
+    longDescription: 'We specialize in WooCommerce development for businesses looking to leverage the power and flexibility of WordPress for their online store. Our WooCommerce solutions include custom themes, extensions, and optimizations that transform the standard plugin into a powerful, tailored eCommerce engine for your business.',
+    price: '$3,500 - $12,000',
+    duration: '4-10 weeks',
+    technologiesUsed: [
+      'WordPress',
+      'WooCommerce',
+      'PHP',
+      'MySQL',
+      'Custom plugin development',
+      'Theme customization'
+    ],
+    keyFeatures: [
+      'Custom WooCommerce themes',
+      'Extension development',
+      'Payment gateway integration',
+      'Shipping method customization',
+      'Product customization options',
+      'Subscription management',
+      'Marketplace functionality'
+    ]
+  },
+  {
+    id: 6,
+    title: 'Shopify Development',
+    description: 'Fast, optimized Shopify stores designed to convert.',
+    longDescription: 'Our Shopify development services create beautiful, high-performing online stores that maximize conversions and sales. We leverage Shopify\'s powerful platform while customizing it to fit your brand perfectly, creating a unique store that stands out from template-based competitors.',
+    price: '$2,500 - $10,000',
+    duration: '3-8 weeks',
+    technologiesUsed: [
+      'Shopify',
+      'Liquid templating',
+      'JavaScript',
+      'Shopify APIs',
+      'Shopify Apps integration',
+      'Custom app development'
+    ],
+    keyFeatures: [
+      'Custom Shopify theme development',
+      'Shopify Plus customization',
+      'Third-party integrations',
+      'Custom checkout experience',
+      'Conversion optimization',
+      'Migration from other platforms',
+      'Custom app development'
+    ]
+  },
+  {
+    id: 7,
+    title: 'WordPress Development',
+    description: 'Customizable, secure WordPress sites made for growth.',
+    longDescription: 'We build premium WordPress websites that go far beyond standard templates. Our WordPress development services include custom theme development, plugin customization, and performance optimization to create fast, secure, and highly functional WordPress sites that can easily scale as your business grows.',
+    price: '$2,500 - $8,000',
+    duration: '3-8 weeks',
+    technologiesUsed: [
+      'WordPress',
+      'PHP',
+      'MySQL',
+      'Custom theme development',
+      'Plugin development',
+      'Advanced Custom Fields'
+    ],
+    keyFeatures: [
+      'Custom WordPress themes',
+      'Plugin development/customization',
+      'Content management optimization',
+      'WordPress multisite',
+      'Membership sites',
+      'Advanced content editing',
+      'Security hardening'
+    ]
+  },
+  {
+    id: 8,
+    title: 'Point of Sale (POS) Development',
+    description: 'Smart POS systems that streamline your retail operations.',
+    longDescription: 'Our Point of Sale development services create custom POS solutions that streamline checkout processes, inventory management, and customer data collection. We build integrated systems that connect your physical store operations with your digital presence for a unified business approach.',
+    price: '$7,000 - $20,000',
+    duration: '8-14 weeks',
+    technologiesUsed: [
+      'JavaScript frameworks',
+      'React Native',
+      'Node.js',
+      'Payment processing APIs',
+      'Hardware integration',
+      'Cloud databases'
+    ],
+    keyFeatures: [
+      'Intuitive checkout interface',
+      'Inventory synchronization',
+      'Customer management',
+      'Loyalty programs',
+      'Sales reporting and analytics',
+      'Staff management',
+      'Multi-location support'
+    ]
+  },
+  {
+    id: 9,
+    title: 'Custom Software Development',
+    description: 'Tailored software solutions to solve complex challenges.',
+    longDescription: 'Our custom software development services create bespoke applications that solve your specific business challenges. We focus on understanding your unique workflows and requirements to build software that streamlines operations, reduces costs, and creates competitive advantages through technology.',
+    price: '$10,000 - $50,000+',
+    duration: '10-24 weeks',
+    technologiesUsed: [
+      'JavaScript frameworks',
+      'Python',
+      'Java',
+      'C#/.NET',
+      'SQL and NoSQL databases',
+      'Cloud services',
+      'Containerization'
+    ],
+    keyFeatures: [
+      'Completely customized workflows',
+      'Integration with existing systems',
+      'Automation of manual processes',
+      'Data analysis and reporting',
+      'User role management',
+      'Scalable architecture',
+      'Ongoing support and maintenance'
+    ]
+  },
+  {
+    id: 10,
+    title: 'Backend & API Development',
+    description: 'Reliable backend architecture and clean API integrations.',
+    longDescription: 'We create robust backend systems and powerful APIs that form the foundation of your digital products. Our backend and API development services focus on performance, security, and scalability, creating systems that can handle heavy loads while maintaining data integrity and fast response times.',
+    price: '$8,000 - $30,000',
+    duration: '8-16 weeks',
+    technologiesUsed: [
+      'Node.js',
+      'Python (Django/Flask)',
+      'PHP',
+      'Ruby on Rails',
+      'GraphQL',
+      'RESTful architecture',
+      'Database optimization'
+    ],
+    keyFeatures: [
+      'Secure API development',
+      'Authentication systems',
+      'Database design and optimization',
+      'Microservices architecture',
+      'Third-party integrations',
+      'Data processing pipelines',
+      'Caching strategies'
+    ]
+  }
+];
+
+// Load development service data
+export async function getAllDevelopmentServices(): Promise<DevelopmentServiceData[]> {
+  try {
+    // First, attempt to fetch from the json file in the public directory
+    const response = await fetch('/data/development-services.json', {
+      // Add cache control for better performance
+      next: { revalidate: 3600 }, // Revalidate at most once per hour
+    });
+    
+    if (!response.ok) {
+      console.warn(`Failed to fetch development services: ${response.status} ${response.statusText}`);
+      return fallbackDevelopmentData;
+    }
+    
+    try {
+      const data = await response.json();
+      return data.services;
+    } catch (parseError) {
+      console.error('Error parsing JSON response:', parseError);
+      return fallbackDevelopmentData;
+    }
+  } catch (fetchError) {
+    console.error('Error fetching development services data:', fetchError);
+    return fallbackDevelopmentData;
+  }
+}
+
+// Get a single development service by ID
+export async function getDevelopmentServiceById(id: number): Promise<DevelopmentServiceData | undefined> {
+  try {
+    const services = await getAllDevelopmentServices();
+    return services.find(service => service.id === id);
+  } catch (error) {
+    console.error(`Error getting development service with id ${id}:`, error);
+    // Return the fallback service with matching ID if available
+    return fallbackDevelopmentData.find(service => service.id === id);
+  }
+}

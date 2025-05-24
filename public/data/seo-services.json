@@ -1,0 +1,239 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "SEO Strategy",
+      "description": "Custom SEO roadmaps designed for your specific business goals.",
+      "longDescription": "Our comprehensive SEO strategy service creates a tailored roadmap for your business, aligning search optimization tactics with your specific goals and target audience. We analyze your industry, competitors, and market position to develop actionable plans that drive sustainable organic growth and maximize ROI.",
+      "price": "$1,500 - $5,000",
+      "duration": "2-4 weeks",
+      "featured": true,
+      "image": "/images/seo-strategy.jpg",
+      "deliverables": [
+        "Comprehensive website analysis",
+        "Competitor research",
+        "Keyword opportunity identification",
+        "Content gap analysis",
+        "Technical SEO recommendations",
+        "Actionable implementation plan",
+        "KPI setting and tracking framework"
+      ],
+      "benefits": [
+        "Clear roadmap for SEO success",
+        "Prioritized actions based on impact",
+        "Alignment with business objectives",
+        "Data-driven decision making",
+        "Competitive advantage",
+        "Maximized ROI from SEO investment"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Local SEO",
+      "description": "Dominate local search results and attract nearby customers.",
+      "longDescription": "Our local SEO services help businesses dominate their local search landscape, driving foot traffic and local conversions. We optimize your Google Business Profile, local citations, and location-based content to ensure your business appears prominently in local search results, maps, and relevant local directories.",
+      "price": "$1,000 - $3,000",
+      "duration": "2-6 weeks",
+      "image": "/images/local-seo.jpg",
+      "deliverables": [
+        "Google Business Profile optimization",
+        "Local citation building and cleanup",
+        "Local keyword research and mapping",
+        "Location page optimization",
+        "Review management strategy",
+        "Local link building",
+        "Competitor local presence analysis"
+      ],
+      "benefits": [
+        "Improved visibility in local map packs",
+        "Higher rankings for local search terms",
+        "Increased foot traffic",
+        "Enhanced local brand reputation",
+        "More quality leads from nearby customers",
+        "Competitive edge in local markets"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Technical SEO",
+      "description": "Site optimization that enhances performance and search visibility.",
+      "longDescription": "Our technical SEO services focus on optimizing your website's infrastructure to improve crawlability, indexation, and overall performance. We identify and resolve technical issues that may be preventing your site from reaching its full ranking potential, creating a solid foundation for all other SEO efforts.",
+      "price": "$2,000 - $6,000",
+      "duration": "3-8 weeks",
+      "image": "/images/technical-seo.jpg",
+      "deliverables": [
+        "Comprehensive technical audit",
+        "Site architecture analysis",
+        "Page speed optimization",
+        "Mobile usability improvements",
+        "Structured data implementation",
+        "Crawl efficiency optimization",
+        "Core Web Vitals enhancement"
+      ],
+      "benefits": [
+        "Improved crawling and indexing",
+        "Enhanced site speed and performance",
+        "Better mobile user experience",
+        "Reduced technical barriers to ranking",
+        "Competitive advantage through site performance",
+        "Increased organic visibility"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "On-Page SEO",
+      "description": "Strategic content optimization that drives organic traffic.",
+      "longDescription": "Our on-page SEO services optimize your website's content and structure to maximize its relevance and authority for targeted keywords. We enhance page elements, content quality, and internal linking to improve your site's visibility and user experience, driving more qualified organic traffic.",
+      "price": "$1,200 - $3,500",
+      "duration": "2-6 weeks",
+      "image": "/images/on-page-seo.jpg",
+      "deliverables": [
+        "Content optimization for target keywords",
+        "Meta tag enhancement",
+        "Heading structure improvement",
+        "Image optimization",
+        "Internal linking strategy",
+        "Content gap remediation",
+        "User experience recommendations"
+      ],
+      "benefits": [
+        "Higher rankings for valuable keywords",
+        "Improved click-through rates from search results",
+        "Enhanced content relevance",
+        "Better user engagement metrics",
+        "More effective internal link equity distribution",
+        "Increased conversion opportunities"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Off-Page SEO",
+      "description": "Building authority through quality backlinks and partnerships.",
+      "longDescription": "Our off-page SEO services focus on building your website's authority and reputation through strategic link building, digital PR, and brand mentions. We develop and execute tactics to earn high-quality backlinks that improve your domain authority and increase your rankings for competitive keywords.",
+      "price": "$1,500 - $4,500",
+      "duration": "3-6 months",
+      "image": "/images/off-page-seo.jpg",
+      "deliverables": [
+        "Link profile analysis",
+        "Competitor backlink research",
+        "Link building strategy development",
+        "Digital PR opportunities",
+        "Content promotion plan",
+        "Brand mention monitoring",
+        "Regular link acquisition reports"
+      ],
+      "benefits": [
+        "Increased domain authority",
+        "Improved rankings for competitive terms",
+        "Enhanced brand visibility and recognition",
+        "Broader content reach and exposure",
+        "Protection against negative SEO",
+        "Diversified traffic sources"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "E-commerce SEO",
+      "description": "Specialized optimization for online stores and product pages.",
+      "longDescription": "Our e-commerce SEO services are specifically designed for online retailers looking to increase product visibility and sales. We optimize product pages, category structures, and technical elements unique to e-commerce sites to drive more qualified traffic and improve conversion rates.",
+      "price": "$2,500 - $7,500",
+      "duration": "3-9 months",
+      "image": "/images/ecommerce-seo.jpg",
+      "deliverables": [
+        "E-commerce site structure optimization",
+        "Product page enhancement",
+        "Category page optimization",
+        "Product schema implementation",
+        "Filter and faceted navigation fixes",
+        "Shopping feed optimization",
+        "Conversion rate optimization recommendations"
+      ],
+      "benefits": [
+        "Higher rankings for product searches",
+        "Improved product visibility in search results",
+        "Enhanced shopping feed performance",
+        "Better user shopping experience",
+        "Reduced cart abandonment",
+        "Increased product page conversions"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Content Strategy",
+      "description": "SEO-driven content planning that builds authority and relevance.",
+      "longDescription": "Our SEO content strategy service develops a comprehensive plan for creating, optimizing, and promoting content that ranks well and serves your audience's needs. We identify content opportunities based on keyword research, competitive gaps, and user intent to build your site's authority and organic visibility.",
+      "price": "$2,000 - $5,000",
+      "duration": "3-6 weeks",
+      "image": "/images/content-strategy.jpg",
+      "deliverables": [
+        "Content audit and gap analysis",
+        "Keyword-driven content mapping",
+        "Editorial calendar development",
+        "Content brief creation",
+        "Topic cluster planning",
+        "Content performance metrics setup",
+        "Content promotion strategy"
+      ],
+      "benefits": [
+        "Focused, strategic content development",
+        "Improved topical authority",
+        "Better resource allocation for content",
+        "Enhanced content quality and relevance",
+        "Increased organic traffic from targeted content",
+        "Higher conversion rates from qualified visitors"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Keyword Research",
+      "description": "Data-backed keyword targeting for maximum search visibility.",
+      "longDescription": "Our keyword research service uncovers the most valuable search opportunities for your business. We analyze search volumes, competition, and user intent to identify the optimal keywords that will drive qualified traffic to your site, allowing you to prioritize your SEO efforts for maximum impact.",
+      "price": "$800 - $2,500",
+      "duration": "1-3 weeks",
+      "image": "/images/keyword-research.jpg",
+      "deliverables": [
+        "Comprehensive keyword research report",
+        "Competitor keyword analysis",
+        "Search intent mapping",
+        "Keyword difficulty assessment",
+        "Keyword grouping and prioritization",
+        "Seasonal trend analysis",
+        "Keyword opportunity scoring"
+      ],
+      "benefits": [
+        "Strategic focus on high-value keywords",
+        "Clear understanding of user search behavior",
+        "Improved content targeting",
+        "Better alignment with user intent",
+        "Identification of quick-win opportunities",
+        "Long-term keyword strategy development"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "SEO Audit",
+      "description": "Comprehensive analysis revealing critical optimization opportunities.",
+      "longDescription": "Our comprehensive SEO audit provides a detailed analysis of your website's current search performance and identifies critical areas for improvement. We examine technical issues, content quality, user experience, and off-page factors to develop a prioritized action plan that will drive meaningful SEO results.",
+      "price": "$1,500 - $5,000",
+      "duration": "2-4 weeks",
+      "image": "/images/seo-audit.jpg",
+      "deliverables": [
+        "Technical SEO health check",
+        "On-page content evaluation",
+        "Off-page analysis",
+        "User experience assessment",
+        "Competitor comparison",
+        "Mobile optimization review",
+        "Prioritized recommendations report"
+      ],
+      "benefits": [
+        "Complete understanding of SEO strengths and weaknesses",
+        "Clear roadmap for improvements",
+        "Identification of quick wins",
+        "Prioritized action items based on impact",
+        "Benchmark for measuring future progress",
+        "Data-driven decision making"
+      ]
+    }
+  ]
+}

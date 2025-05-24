@@ -1,0 +1,103 @@
+/* Critical CSS - only include what's needed for above-the-fold content */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Critical layout components */
+.page-content {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Transition styles */
+.content-loading {
+  opacity: 0;
+}
+
+.content-loaded {
+  opacity: 1;
+}
+
+/* Placeholder styles for dynamic content */
+.nav-placeholder {
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.marquee-placeholder {
+  height: 80px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.services-placeholder {
+  height: 400px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.stats-placeholder, 
+.whyus-placeholder, 
+.testimonials-placeholder, 
+.footer-placeholder {
+  height: 200px;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+/* Only hero section styles - since it's critical */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* Base button styles */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Critical responsive styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .nav-placeholder {
+    height: 60px;
+  }
+}

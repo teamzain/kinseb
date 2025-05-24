@@ -1,0 +1,1914 @@
+{
+  "services": [
+    {
+      "id": "web-design",
+      "title": "Website Design Services",
+      "description": "Creating sleek, strategic websites tailored to your brand.",
+      "longDescription": "Our website design services focus on creating visually stunning, functionally superior websites that align perfectly with your brand identity. We combine modern aesthetics with strategic UX principles to ensure your site not only looks great but also drives conversions.",
+      "price": "$1,500 - $5,000",
+      "duration": "3-6 weeks",
+      "featured": true,
+      "image": "/images/website-design.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Discovery & Research",
+          "description": "We begin by understanding your business goals, target audience, and technical requirements to create a strategic foundation for your website.",
+          "bulletPoints": [
+            "Conduct stakeholder interviews and requirement gathering",
+            "Research your target audience and user personas",
+            "Analyze competitors and market trends",
+            "Define project scope and success metrics"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Strategy & Structure",
+          "description": "We utilize proven techniques to map your content, meet user intentions and create an engaging user experience. By outlining your site's structure, we ensure seamless user journeys to key conversion points.",
+          "bulletPoints": [
+            "Develop a base-level user flow & sitemap",
+            "Utilize wireframing to create a seamless conversion funnel",
+            "Add on-brand, consistent messaging to your structure"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Creative Design",
+          "description": "This stage is where we take your site come to life. Our award-winning designers implement your unique branding elements to your custom web design.",
+          "bulletPoints": [
+            "Thoughtfully place design features to guide the user journey",
+            "Utilize interactive videos & animations",
+            "Create custom, branded illustrations",
+            "Ensure accessibility & search engine optimization"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Responsive Development",
+          "description": "A responsive website is fast, accessible and easy to navigate. It automatically scales to various screen sizes and devices, driving user experience and climbing search engine rankings.",
+          "bulletPoints": [
+            "Transform your wireframes into a flexible UI",
+            "Implement responsive design across all devices",
+            "Optimize for speed and performance"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Quality Assurance",
+          "description": "All projects focus on delivering measurable results and professional outcomes. By following a strict quality assurance protocol, we guarantee a high-quality digital experience for your brand.",
+          "bulletPoints": [
+            "Actively involve our clients throughout every project",
+            "Meticulously test all designs to catch errors",
+            "Use tried and tested tools to ensure quality before launch"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Launch & Optimization",
+          "description": "We launch your website with comprehensive optimization and provide ongoing support to ensure continued success and performance.",
+          "bulletPoints": [
+            "Deploy website to production environment",
+            "Implement analytics and tracking",
+            "Provide training and documentation",
+            "Monitor performance and make adjustments"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Website Design Process",
+        "subtitle": "From research to results — here's how we turn ideas into impactful websites."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "A professionally designed website is crucial for establishing immediate trust and credibility with your audience. It serves as the foundation for every customer interaction, guiding them seamlessly from initial interest to conversion and building lasting relationships with your brand.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Conversion-Focused Design",
+            "description": "Custom web design solutions fully optimized to drive more sales and leads through strategic layout and user experience optimization."
+          },
+          {
+            "number": "02",
+            "title": "Industry-Specific Solutions",
+            "description": "Designs tailored to your unique industry with B2B, services, and ecommerce best practices integrated seamlessly."
+          },
+          {
+            "number": "03",
+            "title": "Mobile-First Approach",
+            "description": "Responsive designs that prioritize mobile user experience, ensuring your site performs perfectly across all devices and screen sizes."
+          },
+          {
+            "number": "04",
+            "title": "SEO-Optimized Structure",
+            "description": "Strategic site architecture built for search engine visibility, helping your business rank higher and attract more organic traffic."
+          }
+        ]
+      }
+    },
+    {
+      "id": "website-redesign",
+      "title": "Website Redesign",
+      "description": "Revamping outdated sites into modern, high-performing platforms.",
+      "longDescription": "Transform your outdated website into a modern, high-performing digital powerhouse. Our comprehensive redesign process analyzes your current site's performance, identifies opportunities for improvement, and implements strategic updates to boost user engagement, conversion rates, and search engine rankings.",
+      "price": "$2,000 - $6,000",
+      "duration": "4-8 weeks",
+      "featured": false,
+      "image": "/images/website-redesign.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Website Audit & Analysis",
+          "description": "We conduct a comprehensive analysis of your current website to identify strengths, weaknesses, and opportunities for improvement.",
+          "bulletPoints": [
+            "Perform technical SEO audit and performance analysis",
+            "Analyze user behavior through analytics data",
+            "Review current content and information architecture",
+            "Assess design elements and user experience issues"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Redesign Strategy",
+          "description": "Based on our audit findings, we develop a strategic roadmap for your website redesign that addresses key issues and maximizes improvements.",
+          "bulletPoints": [
+            "Define redesign goals and success metrics",
+            "Create new site architecture and navigation structure",
+            "Plan content migration and optimization strategy",
+            "Establish design direction and visual guidelines"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Modern Design Creation",
+          "description": "We create contemporary designs that align with current web standards while maintaining your brand identity and improving user experience.",
+          "bulletPoints": [
+            "Design modern, conversion-focused layouts",
+            "Implement responsive design for all devices",
+            "Integrate updated branding and visual elements",
+            "Optimize user interface for better engagement"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Content Migration",
+          "description": "We carefully migrate and optimize your existing content while implementing new structures and improving SEO performance.",
+          "bulletPoints": [
+            "Migrate valuable content to new structure",
+            "Optimize content for search engines",
+            "Implement proper URL redirects",
+            "Update and refresh outdated information"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Performance Optimization",
+          "description": "We enhance your website's speed, functionality, and overall performance to deliver superior user experiences.",
+          "bulletPoints": [
+            "Optimize images and media files",
+            "Implement caching and compression",
+            "Improve site loading speeds",
+            "Enhance mobile responsiveness"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Launch & Monitoring",
+          "description": "We launch your redesigned website and monitor its performance to ensure all improvements are working effectively.",
+          "bulletPoints": [
+            "Deploy redesigned website to live environment",
+            "Monitor site performance and user behavior",
+            "Make post-launch adjustments as needed",
+            "Provide training on new features and functionality"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Website Redesign Process",
+        "subtitle": "Transforming outdated websites into modern, high-performing digital assets."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "An outdated website can significantly harm your business credibility and conversion rates. A strategic redesign improves user experience, increases search engine rankings, and ensures your digital presence reflects your current brand standards and business capabilities.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Improved Performance",
+            "description": "Faster loading speeds and better functionality that enhance user experience and search engine rankings."
+          },
+          {
+            "number": "02",
+            "title": "Modern Design Standards",
+            "description": "Contemporary design that meets current user expectations and industry best practices."
+          },
+          {
+            "number": "03",
+            "title": "Enhanced User Experience",
+            "description": "Improved navigation, accessibility, and overall usability that keeps visitors engaged longer."
+          },
+          {
+            "number": "04",
+            "title": "Better Conversion Rates",
+            "description": "Optimized layouts and user flows designed to convert more visitors into customers."
+          }
+        ]
+      }
+    },
+    {
+      "id": "web-app-design",
+      "title": "Web App Design",
+      "description": "Designing intuitive web applications focused on user experience.",
+      "longDescription": "We specialize in creating sophisticated, user-friendly web applications that solve complex problems with elegant simplicity. Our web app design process combines deep user research, strategic information architecture, and intuitive interface design to deliver powerful digital tools that users love to engage with.",
+      "price": "$3,000 - $10,000",
+      "duration": "6-12 weeks",
+      "featured": false,
+      "image": "/images/web-app-design.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Requirements & Research",
+          "description": "We dive deep into understanding your web application's purpose, user needs, and technical requirements to establish a solid foundation.",
+          "bulletPoints": [
+            "Conduct stakeholder interviews and requirements gathering",
+            "Research target users and create detailed personas",
+            "Analyze competitor apps and market standards",
+            "Define functional specifications and user stories"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Information Architecture",
+          "description": "We structure your web application's information and functionality to create logical, intuitive user flows and navigation patterns.",
+          "bulletPoints": [
+            "Create detailed user flow diagrams",
+            "Design information hierarchy and navigation",
+            "Plan feature organization and accessibility",
+            "Establish data relationships and structures"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Wireframing & Prototyping",
+          "description": "We create interactive wireframes and prototypes that allow you to test and refine the user experience before visual design begins.",
+          "bulletPoints": [
+            "Develop low-fidelity wireframes for all screens",
+            "Create interactive prototypes for user testing",
+            "Map out complex user interactions and workflows",
+            "Validate functionality through prototype testing"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "UI Design System",
+          "description": "We design a comprehensive user interface system with consistent components, patterns, and visual elements for your web application.",
+          "bulletPoints": [
+            "Create cohesive visual design language",
+            "Design reusable UI components and patterns",
+            "Establish color palettes and typography systems",
+            "Develop responsive design guidelines"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "User Testing & Refinement",
+          "description": "We test our designs with real users to validate usability and make data-driven improvements to the interface and experience.",
+          "bulletPoints": [
+            "Conduct usability testing sessions",
+            "Gather user feedback on interface design",
+            "Analyze user behavior and pain points",
+            "Refine designs based on testing insights"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Developer Handoff",
+          "description": "We provide comprehensive design specifications and assets to ensure seamless implementation of your web application design.",
+          "bulletPoints": [
+            "Create detailed design specifications",
+            "Provide all necessary design assets and files",
+            "Document interaction behaviors and animations",
+            "Support development team during implementation"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Web App Design Process",
+        "subtitle": "Creating powerful, user-friendly web applications through strategic design and testing."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "A well-designed web application can transform your business operations and customer interactions. Professional web app design ensures your software is intuitive, efficient, and delivers real value to users while achieving your business objectives.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "User-Centered Design",
+            "description": "Interfaces designed around user needs and behaviors for maximum adoption and satisfaction."
+          },
+          {
+            "number": "02",
+            "title": "Scalable Architecture",
+            "description": "Design systems that grow with your application and accommodate future features seamlessly."
+          },
+          {
+            "number": "03",
+            "title": "Reduced Development Costs",
+            "description": "Thorough planning and prototyping minimize costly changes during development."
+          },
+          {
+            "number": "04",
+            "title": "Competitive Advantage",
+            "description": "Superior user experience that differentiates your application in the marketplace."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobile-app-design",
+      "title": "Mobile App Design",
+      "description": "Crafting beautiful, functional apps for mobile-first users.",
+      "longDescription": "Our mobile app design services create engaging, intuitive experiences specifically optimized for iOS and Android platforms. We focus on native platform conventions, touch-friendly interactions, and performance optimization to ensure your app delivers exceptional user experiences that drive engagement and retention.",
+      "price": "$3,500 - $12,000",
+      "duration": "6-14 weeks",
+      "featured": false,
+      "image": "/images/mobile-app-design.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "App Strategy & Research",
+          "description": "We research your target market, analyze competitor apps, and define your mobile app's core functionality and user experience strategy.",
+          "bulletPoints": [
+            "Conduct market research and competitive analysis",
+            "Define target audience and user personas",
+            "Establish app goals and key performance indicators",
+            "Plan feature set and platform selection (iOS/Android)"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "User Journey Mapping",
+          "description": "We map out detailed user journeys and create flow diagrams that optimize the mobile user experience for your specific app functionality.",
+          "bulletPoints": [
+            "Create comprehensive user flow diagrams",
+            "Map onboarding and core user journeys",
+            "Plan navigation and information architecture",
+            "Define touch interactions and gestures"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Wireframing & Prototyping",
+          "description": "We develop mobile-specific wireframes and interactive prototypes that demonstrate app functionality and user interactions.",
+          "bulletPoints": [
+            "Create mobile wireframes for all key screens",
+            "Develop interactive prototypes for testing",
+            "Plan responsive layouts for different screen sizes",
+            "Design touch-friendly interface elements"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Platform-Specific Design",
+          "description": "We create native-feeling designs that follow iOS and Android design guidelines while maintaining your brand identity.",
+          "bulletPoints": [
+            "Design platform-specific UI following native guidelines",
+            "Create consistent branding across platforms",
+            "Optimize for different screen densities and sizes",
+            "Design app icons and launch screens"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Interaction Design",
+          "description": "We design smooth animations, transitions, and micro-interactions that make your app feel responsive and delightful to use.",
+          "bulletPoints": [
+            "Design micro-interactions and animations",
+            "Create smooth transitions between screens",
+            "Plan loading states and feedback mechanisms",
+            "Optimize touch targets and gesture recognition"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "App Store Optimization",
+          "description": "We create app store assets and prepare your app design for successful launch on iOS App Store and Google Play Store.",
+          "bulletPoints": [
+            "Design app store screenshots and previews",
+            "Create app icons optimized for store visibility",
+            "Prepare marketing materials for app launch",
+            "Provide developer handoff documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Mobile App Design Process",
+        "subtitle": "Creating engaging mobile experiences that users love and businesses benefit from."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Mobile apps provide direct access to your customers and create opportunities for deeper engagement. Professional mobile app design ensures your app stands out in crowded app stores and delivers experiences that users want to return to regularly.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Native Platform Optimization",
+            "description": "Designs that feel natural on iOS and Android, following platform-specific guidelines and conventions."
+          },
+          {
+            "number": "02",
+            "title": "Enhanced User Engagement",
+            "description": "Intuitive interfaces and smooth interactions that keep users engaged and returning to your app."
+          },
+          {
+            "number": "03",
+            "title": "App Store Success",
+            "description": "Optimized app store presence with compelling screenshots and descriptions that drive downloads."
+          },
+          {
+            "number": "04",
+            "title": "Performance-Focused Design",
+            "description": "Lightweight designs optimized for mobile performance and battery efficiency."
+          }
+        ]
+      }
+    },
+    {
+      "id": "branding",
+      "title": "Branding",
+      "description": "Building powerful brand identities that truly connect.",
+      "longDescription": "Our comprehensive branding services help establish authentic connections between your business and your audience. We develop cohesive brand identities that clearly communicate your values, differentiate you from competitors, and create lasting emotional connections with your target market through strategic positioning and compelling visual identity.",
+      "price": "$2,500 - $8,000",
+      "duration": "4-8 weeks",
+      "featured": false,
+      "image": "/images/branding.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Brand Discovery",
+          "description": "We explore your business values, mission, and market position to understand what makes your brand unique and valuable to customers.",
+          "bulletPoints": [
+            "Conduct brand audit and competitive analysis",
+            "Define brand values, mission, and vision",
+            "Research target audience and market positioning",
+            "Identify brand personality and tone of voice"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Brand Strategy",
+          "description": "We develop a comprehensive brand strategy that defines your positioning, messaging, and visual direction for consistent market presence.",
+          "bulletPoints": [
+            "Create brand positioning statement and pillars",
+            "Develop messaging framework and key communications",
+            "Define brand architecture and hierarchy",
+            "Establish brand guidelines and standards"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Logo Design",
+          "description": "We create distinctive logos that capture your brand essence and work effectively across all applications and media formats.",
+          "bulletPoints": [
+            "Develop multiple logo concepts and variations",
+            "Create primary, secondary, and icon versions",
+            "Ensure scalability and versatility across media",
+            "Design in various formats for different applications"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Visual Identity System",
+          "description": "We design a complete visual identity system including colors, typography, and graphic elements that work cohesively across all touchpoints.",
+          "bulletPoints": [
+            "Develop color palette and typography system",
+            "Create pattern libraries and graphic elements",
+            "Design business card and stationery systems",
+            "Establish photography and imagery guidelines"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Brand Applications",
+          "description": "We apply your new brand identity across various touchpoints to demonstrate how it works in real-world applications.",
+          "bulletPoints": [
+            "Design business cards, letterheads, and stationery",
+            "Create digital applications and social media templates",
+            "Develop packaging and merchandise concepts",
+            "Design signage and environmental graphics"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Brand Guidelines",
+          "description": "We compile comprehensive brand guidelines that ensure consistent application of your identity across all future communications and materials.",
+          "bulletPoints": [
+            "Create detailed brand standards manual",
+            "Provide usage guidelines and examples",
+            "Include do's and don'ts for brand application",
+            "Supply all logo files and brand assets"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Branding Process",
+        "subtitle": "Building authentic brand identities that resonate with your audience and drive business growth."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Strong branding differentiates your business in competitive markets and builds emotional connections with customers. Professional brand identity increases recognition, trust, and perceived value, ultimately driving customer loyalty and business growth.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Market Differentiation",
+            "description": "Stand out from competitors with a distinctive brand identity that clearly communicates your unique value proposition."
+          },
+          {
+            "number": "02",
+            "title": "Customer Trust & Loyalty",
+            "description": "Build emotional connections that foster customer loyalty and encourage repeat business and referrals."
+          },
+          {
+            "number": "03",
+            "title": "Professional Credibility",
+            "description": "Establish immediate credibility and professionalism that attracts customers and business partners."
+          },
+          {
+            "number": "04",
+            "title": "Consistent Communications",
+            "description": "Ensure all marketing materials and touchpoints reinforce your brand message consistently."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ui-ux-design",
+      "title": "UI/UX Design",
+      "description": "Creating intuitive interfaces that delight users and drive engagement.",
+      "longDescription": "Our UI/UX design services focus on creating intuitive, enjoyable digital experiences that satisfy user needs while achieving business objectives. We combine extensive user research, strategic information architecture, and beautiful visual design to build interfaces that feel natural, efficient, and delightful to use.",
+      "price": "$2,500 - $9,000",
+      "duration": "4-10 weeks",
+      "featured": true,
+      "image": "/images/ui-ux-design.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "User Research",
+          "description": "We conduct comprehensive research to understand your users' needs, behaviors, and pain points to inform design decisions.",
+          "bulletPoints": [
+            "Conduct user interviews and surveys",
+            "Create detailed user personas and journey maps",
+            "Analyze user behavior through data and analytics",
+            "Research competitors and industry best practices"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Information Architecture",
+          "description": "We organize and structure information to create logical, intuitive navigation and content hierarchy that users can easily understand.",
+          "bulletPoints": [
+            "Create site maps and navigation structures",
+            "Develop content organization and hierarchy",
+            "Plan user flows and interaction patterns",
+            "Design information taxonomy and labeling"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Wireframing",
+          "description": "We create detailed wireframes that establish layout, functionality, and content placement before adding visual design elements.",
+          "bulletPoints": [
+            "Develop low-fidelity wireframes for all screens",
+            "Plan responsive layouts for different devices",
+            "Define functional requirements and interactions",
+            "Establish content placement and hierarchy"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Interactive Prototyping",
+          "description": "We build interactive prototypes that allow you to experience and test the user interface before final design implementation.",
+          "bulletPoints": [
+            "Create clickable, interactive prototypes",
+            "Demonstrate user flows and interactions",
+            "Test functionality and user experience",
+            "Gather feedback and iterate on design"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Visual UI Design",
+          "description": "We apply beautiful visual design that enhances usability while creating an engaging and memorable user experience.",
+          "bulletPoints": [
+            "Design cohesive visual interface elements",
+            "Create color schemes and typography systems",
+            "Develop iconography and graphic elements",
+            "Ensure accessibility and usability standards"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Usability Testing",
+          "description": "We test our designs with real users to validate usability and make data-driven improvements to optimize the user experience.",
+          "bulletPoints": [
+            "Conduct moderated usability testing sessions",
+            "Analyze user behavior and identify pain points",
+            "Gather quantitative and qualitative feedback",
+            "Iterate designs based on testing insights"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our UI/UX Design Process",
+        "subtitle": "Creating user-centered designs through research, testing, and continuous refinement."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Exceptional user experience directly impacts customer satisfaction, conversion rates, and business success. Professional UI/UX design ensures your digital products are intuitive, accessible, and enjoyable to use, leading to higher user adoption and retention.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Increased Conversions",
+            "description": "Optimized user flows and interfaces that guide users toward desired actions and improve conversion rates."
+          },
+          {
+            "number": "02",
+            "title": "Reduced Development Costs",
+            "description": "Thorough planning and testing prevent costly redesigns and development changes later in the process."
+          },
+          {
+            "number": "03",
+            "title": "Enhanced User Satisfaction",
+            "description": "Intuitive, accessible designs that create positive user experiences and encourage repeat usage."
+          },
+          {
+            "number": "04",
+            "title": "Data-Driven Decisions",
+            "description": "Research-based design decisions that are validated through user testing and analytics insights."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ecommerce-web-design",
+      "title": "eCommerce Web Design",
+      "description": "Driving sales with stunning, conversion-focused store designs.",
+      "longDescription": "We design e-commerce experiences that perfectly balance aesthetic appeal with proven conversion optimization principles. Our e-commerce design services focus on creating trustworthy, user-friendly online stores that guide visitors seamlessly from product discovery through purchase completion, maximizing both user satisfaction and sales revenue.",
+      "price": "$3,000 - $12,000",
+      "duration": "6-12 weeks",
+      "featured": false,
+      "image": "/images/ecommerce-design.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "E-commerce Strategy",
+          "description": "We analyze your products, target market, and business goals to develop a comprehensive e-commerce strategy that drives sales.",
+          "bulletPoints": [
+            "Analyze target market and customer behavior",
+            "Research competitors and industry benchmarks",
+            "Define e-commerce goals and success metrics",
+            "Plan product catalog structure and organization"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Platform Selection & Planning",
+          "description": "We help you choose the right e-commerce platform and plan the technical architecture for optimal performance and scalability.",
+          "bulletPoints": [
+            "Evaluate and recommend e-commerce platforms",
+            "Plan site architecture and navigation structure",
+            "Design product categorization and filtering",
+            "Plan payment and shipping integrations"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Conversion-Focused Design",
+          "description": "We create designs that prioritize conversion optimization while maintaining visual appeal and brand consistency.",
+          "bulletPoints": [
+            "Design product pages for maximum conversion",
+            "Create compelling shopping cart and checkout flows",
+            "Implement trust signals and security features",
+            "Optimize for mobile shopping experiences"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Product Showcase Design",
+          "description": "We design engaging product displays that highlight your merchandise effectively and encourage purchases.",
+          "bulletPoints": [
+            "Create attractive product gallery layouts",
+            "Design product detail pages with rich media",
+            "Plan product comparison and recommendation features",
+            "Design effective search and filtering interfaces"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Checkout Optimization",
+          "description": "We design streamlined checkout processes that minimize cart abandonment and maximize successful transactions.",
+          "bulletPoints": [
+            "Design simplified, multi-step checkout flows",
+            "Implement guest checkout and account options",
+            "Integrate secure payment gateway interfaces",
+            "Create order confirmation and tracking systems"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Performance & Launch",
+          "description": "We optimize your e-commerce site for speed and performance, then launch with comprehensive testing and monitoring.",
+          "bulletPoints": [
+            "Optimize site speed and loading performance",
+            "Test all e-commerce functionality thoroughly",
+            "Implement analytics and conversion tracking",
+            "Provide training on store management and updates"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our E-commerce Design Process",
+        "subtitle": "Building high-converting online stores that drive sales and customer satisfaction."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional e-commerce design directly impacts your bottom line through improved conversion rates and customer experience. A well-designed online store builds trust, simplifies the buying process, and encourages repeat purchases, leading to sustainable business growth.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Higher Conversion Rates",
+            "description": "Optimized checkout flows and product pages that convert more visitors into paying customers."
+          },
+          {
+            "number": "02",
+            "title": "Mobile Commerce Ready",
+            "description": "Mobile-optimized designs that capture the growing mobile shopping market effectively."
+          },
+          {
+            "number": "03",
+            "title": "Trust & Security",
+            "description": "Professional design that builds customer confidence and incorporates security best practices."
+          },
+          {
+            "number": "04",
+            "title": "Scalable Growth",
+            "description": "Platform architecture that supports business growth and expanding product catalogs."
+          }
+        ]
+      }
+    }
+    ,
+    {
+  "services": [
+    {
+      "id": "website-development",
+      "title": "Website Development",
+      "description": "Building robust, scalable websites with cutting-edge technology.",
+      "longDescription": "Our website development services transform designs into fully functional, high-performance websites. We use modern technologies and best practices to create fast, secure, and scalable web solutions that provide exceptional user experiences while being easy to maintain and update.",
+      "price": "$2,000 - $8,000",
+      "duration": "4-8 weeks",
+      "featured": true,
+      "image": "/images/website-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Requirements Engineering",
+          "description": "We conduct comprehensive requirements analysis to understand your business challenges and define the optimal software solution.",
+          "bulletPoints": [
+            "Analyze current business processes and pain points",
+            "Define detailed functional and technical requirements",
+            "Create user stories and acceptance criteria",
+            "Plan system integration and data migration needs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "System Design & Architecture",
+          "description": "We design robust system architecture that ensures scalability, maintainability, and optimal performance.",
+          "bulletPoints": [
+            "Design scalable software architecture",
+            "Plan database schema and data models",
+            "Define API structures and integration points",
+            "Create technical specifications and documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Agile Development",
+          "description": "We develop your custom software using agile methodology with regular feedback and iterative improvements.",
+          "bulletPoints": [
+            "Implement core business logic and features",
+            "Build user interfaces and experience flows",
+            "Develop data processing and automation",
+            "Create integration modules and APIs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Integration & Testing",
+          "description": "We integrate your software with existing systems and conduct comprehensive testing to ensure reliability.",
+          "bulletPoints": [
+            "Integrate with existing business systems",
+            "Perform comprehensive functionality testing",
+            "Conduct security and performance testing",
+            "Execute user acceptance testing"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Deployment & Migration",
+          "description": "We deploy your custom software and migrate data from existing systems with minimal business disruption.",
+          "bulletPoints": [
+            "Deploy software to production environment",
+            "Migrate data from legacy systems",
+            "Configure monitoring and backup systems",
+            "Implement security and access controls"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Training & Support",
+          "description": "We provide comprehensive training and establish ongoing support to ensure successful software adoption.",
+          "bulletPoints": [
+            "Provide comprehensive user training",
+            "Create detailed documentation and manuals",
+            "Establish support and maintenance procedures",
+            "Plan future enhancements and updates"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Custom Software Development Process",
+        "subtitle": "Creating bespoke software solutions that solve unique business challenges."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Custom software development provides solutions perfectly tailored to your business needs and processes. Professional development ensures optimal workflow automation, seamless system integration, and competitive advantages that off-the-shelf software cannot provide.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Perfect Workflow Match",
+            "description": "Software designed specifically for your business processes, improving efficiency and productivity."
+          },
+          {
+            "number": "02",
+            "title": "Competitive Advantage",
+            "description": "Unique capabilities and features that differentiate your business in the marketplace."
+          },
+          {
+            "number": "03",
+            "title": "Seamless Integration",
+            "description": "Perfect integration with existing systems and databases without compatibility issues."
+          },
+          {
+            "number": "04",
+            "title": "Complete Ownership",
+            "description": "Full ownership and control over your software with no vendor lock-in or licensing restrictions."
+          }
+        ]
+      }
+    },
+    {
+      "id": "backend-api-development",
+      "title": "Backend & API Development",
+      "description": "Robust backend systems and APIs that power modern applications.",
+      "longDescription": "We build powerful backend systems and APIs that serve as the foundation for web applications, mobile apps, and integrations. Our backend development focuses on performance, security, and scalability to ensure your applications run smoothly and efficiently.",
+      "price": "$6,000 - $25,000",
+      "duration": "8-16 weeks",
+      "featured": false,
+      "image": "/images/backend-api-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "API Design & Planning",
+          "description": "We design comprehensive API architecture and documentation that meets your application requirements and integration needs.",
+          "bulletPoints": [
+            "Design RESTful API architecture and endpoints",
+            "Create comprehensive API documentation",
+            "Plan authentication and authorization systems",
+            "Define data models and validation rules"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Database Architecture",
+          "description": "We design optimized database structures that ensure data integrity, performance, and scalability.",
+          "bulletPoints": [
+            "Design normalized database schema",
+            "Optimize queries and indexing strategies",
+            "Plan data backup and recovery procedures",
+            "Implement data security and encryption"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Backend Development",
+          "description": "We build robust backend systems with efficient data processing, business logic, and integration capabilities.",
+          "bulletPoints": [
+            "Develop core business logic and algorithms",
+            "Implement data processing and validation",
+            "Build authentication and user management",
+            "Create automated workflows and tasks"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "API Implementation",
+          "description": "We implement comprehensive APIs that enable seamless communication between applications and services.",
+          "bulletPoints": [
+            "Build RESTful API endpoints",
+            "Implement rate limiting and caching",
+            "Create webhook and real-time features",
+            "Develop API versioning and documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Security & Performance",
+          "description": "We implement robust security measures and optimize performance for reliable, fast backend operations.",
+          "bulletPoints": [
+            "Implement authentication and authorization",
+            "Add data encryption and security measures",
+            "Optimize performance and response times",
+            "Configure monitoring and alerting systems"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Deployment & Monitoring",
+          "description": "We deploy your backend systems and establish comprehensive monitoring to ensure optimal performance.",
+          "bulletPoints": [
+            "Deploy to scalable cloud infrastructure",
+            "Configure load balancing and auto-scaling",
+            "Set up monitoring and performance tracking",
+            "Provide API documentation and integration support"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Backend & API Development Process",
+        "subtitle": "Building robust backend systems that power modern applications and integrations."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional backend and API development ensures your applications have a solid foundation for growth and integration. Robust backend systems provide security, scalability, and reliability while enabling seamless connections between different software systems and services.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Scalable Architecture",
+            "description": "Backend systems designed to handle growing user bases and increasing data volumes efficiently."
+          },
+          {
+            "number": "02",
+            "title": "Secure Data Handling",
+            "description": "Enterprise-level security measures that protect sensitive data and ensure compliance requirements."
+          },
+          {
+            "number": "03",
+            "title": "Integration Ready",
+            "description": "APIs that enable seamless integration with third-party services and existing business systems."
+          },
+          {
+            "number": "04",
+            "title": "High Performance",
+            "description": "Optimized backend systems that deliver fast response times and reliable performance."
+          }
+        ]
+      }
+    }
+  ]
+} "01",
+          "title": "Technical Planning & Setup",
+          "description": "We analyze technical requirements and set up the development environment with the optimal technology stack for your project.",
+          "bulletPoints": [
+            "Analyze technical requirements and specifications",
+            "Choose optimal technology stack and frameworks",
+            "Set up development environment and version control",
+            "Plan database architecture and hosting infrastructure"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Frontend Development",
+          "description": "We code responsive, interactive user interfaces that work seamlessly across all devices and browsers.",
+          "bulletPoints": [
+            "Convert designs into responsive HTML/CSS code",
+            "Implement interactive features and animations",
+            "Ensure cross-browser compatibility",
+            "Optimize for mobile-first experiences"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Backend Development",
+          "description": "We build robust server-side functionality that powers your website's features and manages data securely.",
+          "bulletPoints": [
+            "Develop server-side logic and APIs",
+            "Implement database design and optimization",
+            "Create content management system integration",
+            "Build secure user authentication systems"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Integration & Testing",
+          "description": "We integrate all components and conduct comprehensive testing to ensure everything works perfectly together.",
+          "bulletPoints": [
+            "Integrate frontend and backend components",
+            "Implement third-party service integrations",
+            "Conduct thorough functionality testing",
+            "Perform security and performance testing"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Performance Optimization",
+          "description": "We optimize your website for speed, SEO, and user experience to ensure maximum performance and search visibility.",
+          "bulletPoints": [
+            "Optimize page loading speeds and performance",
+            "Implement SEO best practices and meta tags",
+            "Configure caching and compression systems",
+            "Optimize images and media files"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Deployment & Launch",
+          "description": "We deploy your website to production servers and provide comprehensive training and documentation.",
+          "bulletPoints": [
+            "Deploy website to production environment",
+            "Configure SSL certificates and security measures",
+            "Set up analytics and monitoring tools",
+            "Provide training and documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Website Development Process",
+        "subtitle": "From code to launch — building high-performance websites with modern technology."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional website development ensures your site is fast, secure, and scalable. Modern development practices improve search engine rankings, user experience, and conversion rates while providing a solid foundation for future growth and feature additions.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Modern Technology Stack",
+            "description": "Built with cutting-edge technologies that ensure fast performance, security, and future scalability."
+          },
+          {
+            "number": "02",
+            "title": "SEO-Optimized Code",
+            "description": "Clean, semantic code structure that search engines love, helping your site rank higher in search results."
+          },
+          {
+            "number": "03",
+            "title": "Mobile-First Development",
+            "description": "Responsive development that prioritizes mobile experience, ensuring optimal performance on all devices."
+          },
+          {
+            "number": "04",
+            "title": "Scalable Architecture",
+            "description": "Built to grow with your business, easily accommodating new features and increased traffic over time."
+          }
+        ]
+      }
+    },
+    {
+      "id": "webapp-development",
+      "title": "Web App Development",
+      "description": "Creating powerful web applications for complex business needs.",
+      "longDescription": "We develop sophisticated web applications that handle complex business logic and provide rich user experiences. Our web apps are built with scalable architectures, real-time capabilities, and advanced functionality to support your business operations and user requirements.",
+      "price": "$5,000 - $25,000",
+      "duration": "8-16 weeks",
+      "featured": true,
+      "image": "/images/webapp-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Requirements Analysis",
+          "description": "We conduct detailed analysis of your business requirements and define the technical specifications for your web application.",
+          "bulletPoints": [
+            "Gather detailed functional requirements",
+            "Define user roles and permission systems",
+            "Plan data models and workflow processes",
+            "Create technical specifications document"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "System Architecture",
+          "description": "We design scalable system architecture that can handle complex business logic and high user loads.",
+          "bulletPoints": [
+            "Design scalable application architecture",
+            "Plan database schema and relationships",
+            "Define API structure and endpoints",
+            "Choose appropriate technology frameworks"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Core Development",
+          "description": "We build the core functionality of your web application with robust backend systems and intuitive user interfaces.",
+          "bulletPoints": [
+            "Develop core business logic and features",
+            "Build user authentication and authorization",
+            "Create responsive user interface components",
+            "Implement real-time features and notifications"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "API Development",
+          "description": "We create comprehensive APIs that enable seamless data exchange and third-party integrations.",
+          "bulletPoints": [
+            "Develop RESTful APIs for data access",
+            "Implement API authentication and security",
+            "Create comprehensive API documentation",
+            "Build integration endpoints for third-party services"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Testing & Quality Assurance",
+          "description": "We conduct extensive testing to ensure your web application is reliable, secure, and performs optimally.",
+          "bulletPoints": [
+            "Perform unit and integration testing",
+            "Conduct user acceptance testing",
+            "Execute security and performance testing",
+            "Test across different browsers and devices"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Deployment & Monitoring",
+          "description": "We deploy your web application and set up monitoring systems to ensure optimal performance and reliability.",
+          "bulletPoints": [
+            "Deploy to production environment",
+            "Configure monitoring and alerting systems",
+            "Set up automated backup systems",
+            "Provide user training and documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Web App Development Process",
+        "subtitle": "Building powerful web applications that solve complex business challenges."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Custom web applications streamline business operations, improve efficiency, and provide competitive advantages. Professional development ensures your application is scalable, secure, and integrates seamlessly with existing systems while delivering exceptional user experiences.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Streamlined Operations",
+            "description": "Automate complex business processes and workflows to improve efficiency and reduce manual work."
+          },
+          {
+            "number": "02",
+            "title": "Real-Time Capabilities",
+            "description": "Live updates, notifications, and collaborative features that keep teams connected and informed."
+          },
+          {
+            "number": "03",
+            "title": "Scalable Architecture",
+            "description": "Built to handle growing user bases and increasing data volumes without performance degradation."
+          },
+          {
+            "number": "04",
+            "title": "Integration Ready",
+            "description": "Seamlessly connect with existing business systems, APIs, and third-party services."
+          }
+        ]
+      }
+    },
+    {
+      "id": "custom-web-development",
+      "title": "Custom Web Development",
+      "description": "Tailored web solutions built specifically for your unique requirements.",
+      "longDescription": "Our custom web development services create bespoke solutions tailored to your specific business needs. We build from scratch using the most appropriate technologies for your requirements, ensuring your web solution is perfectly aligned with your business processes and goals.",
+      "price": "$4,000 - $20,000",
+      "duration": "6-14 weeks",
+      "featured": false,
+      "image": "/images/custom-web-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Discovery & Analysis",
+          "description": "We conduct comprehensive discovery to understand your unique business requirements and technical challenges.",
+          "bulletPoints": [
+            "Analyze current systems and workflows",
+            "Document specific business requirements",
+            "Identify integration needs and constraints",
+            "Define success criteria and objectives"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Custom Solution Design",
+          "description": "We design a tailored solution architecture that perfectly fits your business processes and technical requirements.",
+          "bulletPoints": [
+            "Create custom system architecture",
+            "Design bespoke user interfaces",
+            "Plan custom database structures",
+            "Define integration points and APIs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Agile Development",
+          "description": "We use agile methodology to build your custom solution with regular feedback and iterative improvements.",
+          "bulletPoints": [
+            "Develop in iterative sprints",
+            "Implement custom business logic",
+            "Build tailored user interfaces",
+            "Create custom workflow automation"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "System Integration",
+          "description": "We integrate your custom solution with existing systems and third-party services for seamless operation.",
+          "bulletPoints": [
+            "Integrate with existing business systems",
+            "Connect third-party services and APIs",
+            "Implement data synchronization",
+            "Create custom reporting and analytics"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Testing & Refinement",
+          "description": "We thoroughly test your custom solution and refine it based on user feedback and performance metrics.",
+          "bulletPoints": [
+            "Conduct comprehensive functionality testing",
+            "Perform user acceptance testing",
+            "Optimize performance and security",
+            "Refine based on user feedback"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Deployment & Training",
+          "description": "We deploy your custom solution and provide comprehensive training to ensure successful adoption.",
+          "bulletPoints": [
+            "Deploy to production environment",
+            "Provide comprehensive user training",
+            "Create detailed documentation",
+            "Establish ongoing support procedures"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Custom Web Development Process",
+        "subtitle": "Creating bespoke solutions that perfectly fit your unique business requirements."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Custom web development provides solutions that exactly match your business processes and requirements. Unlike off-the-shelf software, custom solutions offer unlimited flexibility, perfect integration with existing systems, and the ability to evolve with your business needs.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Perfect Fit Solution",
+            "description": "Built specifically for your business processes, ensuring optimal workflow and efficiency."
+          },
+          {
+            "number": "02",
+            "title": "Unlimited Flexibility",
+            "description": "Complete control over features, functionality, and future development without vendor limitations."
+          },
+          {
+            "number": "03",
+            "title": "Seamless Integration",
+            "description": "Perfect integration with existing systems, databases, and business processes."
+          },
+          {
+            "number": "04",
+            "title": "Competitive Advantage",
+            "description": "Unique capabilities that differentiate your business and provide competitive advantages."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ecommerce-development",
+      "title": "E-commerce Development",
+      "description": "Building high-converting online stores with advanced functionality.",
+      "longDescription": "We develop comprehensive e-commerce solutions that drive sales and provide exceptional shopping experiences. Our e-commerce development includes custom features, payment integrations, inventory management, and optimization for conversion and performance.",
+      "price": "$4,000 - $15,000",
+      "duration": "6-12 weeks",
+      "featured": true,
+      "image": "/images/ecommerce-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "E-commerce Strategy",
+          "description": "We develop a comprehensive e-commerce strategy based on your business model, target market, and sales objectives.",
+          "bulletPoints": [
+            "Analyze business model and target market",
+            "Define e-commerce requirements and features",
+            "Choose optimal platform and technology stack",
+            "Plan product catalog and pricing structure"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Platform Development",
+          "description": "We build your e-commerce platform with custom features and functionality tailored to your business needs.",
+          "bulletPoints": [
+            "Develop custom e-commerce platform",
+            "Build product catalog and management system",
+            "Create user account and profile systems",
+            "Implement search and filtering functionality"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Payment & Security",
+          "description": "We integrate secure payment systems and implement robust security measures to protect customer data and transactions.",
+          "bulletPoints": [
+            "Integrate multiple payment gateways",
+            "Implement SSL certificates and encryption",
+            "Build secure checkout processes",
+            "Add fraud detection and prevention"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Inventory & Order Management",
+          "description": "We build comprehensive systems for managing inventory, orders, and fulfillment processes.",
+          "bulletPoints": [
+            "Develop inventory management system",
+            "Create order processing workflows",
+            "Build shipping and fulfillment integration",
+            "Implement customer service tools"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Conversion Optimization",
+          "description": "We optimize your e-commerce store for maximum conversions and sales performance.",
+          "bulletPoints": [
+            "Optimize checkout flow and user experience",
+            "Implement abandoned cart recovery",
+            "Add product recommendations and upselling",
+            "Create loyalty and rewards programs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Launch & Analytics",
+          "description": "We launch your e-commerce store and implement comprehensive analytics to track performance and sales.",
+          "bulletPoints": [
+            "Deploy store to production environment",
+            "Configure analytics and conversion tracking",
+            "Set up performance monitoring",
+            "Provide store management training"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our E-commerce Development Process",
+        "subtitle": "Building high-converting online stores that drive sales and customer satisfaction."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional e-commerce development creates online stores that convert visitors into customers. Custom development provides unique features, seamless integrations, and optimization strategies that increase sales, improve customer experience, and support business growth.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Higher Conversion Rates",
+            "description": "Optimized shopping experiences and checkout flows that convert more visitors into paying customers."
+          },
+          {
+            "number": "02",
+            "title": "Secure Transactions",
+            "description": "Enterprise-level security measures that protect customer data and build trust with shoppers."
+          },
+          {
+            "number": "03",
+            "title": "Mobile Commerce",
+            "description": "Mobile-optimized shopping experiences that capture the growing mobile commerce market."
+          },
+          {
+            "number": "04",
+            "title": "Scalable Growth",
+            "description": "Architecture that supports business growth, from startup to enterprise-level sales volumes."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopify-development",
+      "title": "Shopify Development",
+      "description": "Expert Shopify store development and customization services.",
+      "longDescription": "Our Shopify development services leverage the power of the Shopify platform to create beautiful, high-converting online stores. We specialize in custom theme development, app integrations, and advanced Shopify features to maximize your store's potential.",
+      "price": "$2,500 - $10,000",
+      "duration": "4-10 weeks",
+      "featured": false,
+      "image": "/images/shopify-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Shopify Store Setup",
+          "description": "We set up your Shopify store with optimal configuration and prepare the foundation for custom development.",
+          "bulletPoints": [
+            "Configure Shopify store settings and preferences",
+            "Set up product categories and collections",
+            "Configure payment and shipping settings",
+            "Plan custom theme requirements"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Custom Theme Development",
+          "description": "We create custom Shopify themes that reflect your brand and provide unique shopping experiences.",
+          "bulletPoints": [
+            "Develop custom Shopify theme from scratch",
+            "Implement responsive design for all devices",
+            "Create custom product page layouts",
+            "Build unique homepage and landing pages"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "App Integration & Customization",
+          "description": "We integrate and customize Shopify apps to extend your store's functionality and improve operations.",
+          "bulletPoints": [
+            "Research and select optimal Shopify apps",
+            "Integrate apps with custom configurations",
+            "Customize app functionality for specific needs",
+            "Develop custom Shopify apps when needed"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Product & Content Setup",
+          "description": "We set up your product catalog and content with SEO optimization and compelling presentations.",
+          "bulletPoints": [
+            "Import and organize product catalog",
+            "Optimize product descriptions for SEO",
+            "Set up product variants and inventory",
+            "Create compelling content and pages"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Performance Optimization",
+          "description": "We optimize your Shopify store for speed, conversions, and search engine visibility.",
+          "bulletPoints": [
+            "Optimize page loading speeds",
+            "Implement SEO best practices",
+            "Configure conversion tracking",
+            "Optimize checkout flow for conversions"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Launch & Training",
+          "description": "We launch your Shopify store and provide comprehensive training on managing your online business.",
+          "bulletPoints": [
+            "Launch store with full functionality",
+            "Provide comprehensive Shopify training",
+            "Set up analytics and reporting",
+            "Establish ongoing support procedures"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Shopify Development Process",
+        "subtitle": "Creating powerful Shopify stores that drive sales and provide exceptional shopping experiences."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional Shopify development maximizes the platform's potential while creating unique brand experiences. Custom development provides competitive advantages, improved conversions, and scalable solutions that grow with your business success.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Platform Expertise",
+            "description": "Deep knowledge of Shopify's capabilities and limitations, ensuring optimal store performance."
+          },
+          {
+            "number": "02",
+            "title": "Custom Functionality",
+            "description": "Unique features and customizations that differentiate your store from competitors."
+          },
+          {
+            "number": "03",
+            "title": "Conversion Optimization",
+            "description": "Proven strategies and optimizations that increase sales and improve customer experience."
+          },
+          {
+            "number": "04",
+            "title": "Scalable Solutions",
+            "description": "Architecture that supports business growth from startup to enterprise-level operations."
+          }
+        ]
+      }
+    },
+    {
+      "id": "wordpress-development",
+      "title": "WordPress Development",
+      "description": "Professional WordPress websites with custom functionality.",
+      "longDescription": "We create powerful WordPress websites that combine ease of use with advanced functionality. Our WordPress development includes custom themes, plugin development, and optimization to deliver fast, secure, and user-friendly websites that are easy to manage.",
+      "price": "$1,800 - $8,000",
+      "duration": "3-8 weeks",
+      "featured": false,
+      "image": "/images/wordpress-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "WordPress Setup & Planning",
+          "description": "We set up WordPress with optimal configuration and plan the site structure and functionality requirements.",
+          "bulletPoints": [
+            "Install and configure WordPress core",
+            "Plan site structure and content organization",
+            "Choose and configure hosting environment",
+            "Set up development and staging environments"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "Custom Theme Development",
+          "description": "We create custom WordPress themes that perfectly match your brand and provide unique functionality.",
+          "bulletPoints": [
+            "Develop custom WordPress theme from scratch",
+            "Implement responsive design principles",
+            "Create custom post types and fields",
+            "Build dynamic content templates"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Plugin Integration & Development",
+          "description": "We integrate essential plugins and develop custom functionality to meet your specific requirements.",
+          "bulletPoints": [
+            "Select and configure essential plugins",
+            "Develop custom plugins for specific needs",
+            "Customize existing plugin functionality",
+            "Ensure plugin compatibility and security"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Content Management Setup",
+          "description": "We configure WordPress for easy content management and create user-friendly admin interfaces.",
+          "bulletPoints": [
+            "Configure user roles and permissions",
+            "Set up content editing workflows",
+            "Create custom admin interfaces",
+            "Implement SEO optimization tools"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Security & Performance",
+          "description": "We implement comprehensive security measures and optimize WordPress for maximum performance.",
+          "bulletPoints": [
+            "Implement security best practices",
+            "Configure backup and recovery systems",
+            "Optimize database and caching",
+            "Improve page loading speeds"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Launch & Training",
+          "description": "We launch your WordPress site and provide comprehensive training on content management and maintenance.",
+          "bulletPoints": [
+            "Deploy site to production environment",
+            "Provide WordPress training and documentation",
+            "Set up maintenance and update procedures",
+            "Configure analytics and monitoring"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our WordPress Development Process",
+        "subtitle": "Building powerful, user-friendly WordPress websites with custom functionality."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Professional WordPress development combines the platform's flexibility with custom functionality and security. Expert development ensures your site is fast, secure, SEO-optimized, and easy to manage while providing unique features that support your business goals.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Easy Content Management",
+            "description": "User-friendly interface that makes updating content, images, and pages simple for non-technical users."
+          },
+          {
+            "number": "02",
+            "title": "SEO-Optimized",
+            "description": "Built-in SEO features and optimization that help your website rank higher in search engine results."
+          },
+          {
+            "number": "03",
+            "title": "Custom Functionality",
+            "description": "Tailored features and plugins that provide exactly the functionality your business needs."
+          },
+          {
+            "number": "04",
+            "title": "Secure & Reliable",
+            "description": "Enterprise-level security measures and regular updates that keep your website safe and performing well."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pos-development",
+      "title": "POS Development",
+      "description": "Custom point-of-sale systems for retail and service businesses.",
+      "longDescription": "We develop custom Point of Sale (POS) systems that streamline your business operations. Our POS solutions include inventory management, sales tracking, customer management, and reporting features tailored to your specific business requirements.",
+      "price": "$8,000 - $30,000",
+      "duration": "10-18 weeks",
+      "featured": false,
+      "image": "/images/pos-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Business Analysis",
+          "description": "We analyze your business operations and requirements to design a POS system that fits your specific workflow.",
+          "bulletPoints": [
+            "Analyze current business processes",
+            "Document POS requirements and features",
+            "Plan hardware and software integration",
+            "Define user roles and access levels"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "System Architecture",
+          "description": "We design the technical architecture for your POS system with consideration for scalability and reliability.",
+          "bulletPoints": [
+            "Design scalable system architecture",
+            "Plan database structure for transactions",
+            "Define API endpoints and integrations",
+            "Choose optimal technology stack"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Core POS Development",
+          "description": "We develop the core POS functionality including sales processing, inventory tracking, and customer management.",
+          "bulletPoints": [
+            "Build sales processing and checkout system",
+            "Develop inventory management features",
+            "Create customer database and profiles",
+            "Implement employee management system"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Payment & Hardware Integration",
+          "description": "We integrate payment processing systems and hardware components for seamless operation.",
+          "bulletPoints": [
+            "Integrate payment processing systems",
+            "Connect receipt printers and cash drawers",
+            "Set up barcode scanners and card readers",
+            "Configure multi-location synchronization"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Reporting & Analytics",
+          "description": "We build comprehensive reporting and analytics features to help you understand your business performance.",
+          "bulletPoints": [
+            "Create sales and financial reports",
+            "Build inventory and product analytics",
+            "Develop customer and employee reports",
+            "Implement real-time dashboard features"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Deployment & Training",
+          "description": "We deploy your POS system and provide comprehensive training to ensure smooth operations.",
+          "bulletPoints": [
+            "Install and configure POS hardware",
+            "Deploy software to all locations",
+            "Provide comprehensive staff training",
+            "Set up ongoing support and maintenance"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our POS Development Process",
+        "subtitle": "Building custom point-of-sale systems that streamline business operations."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Custom POS development provides systems tailored to your specific business needs and workflows. Professional development ensures reliable operation, comprehensive features, and integration capabilities that improve efficiency and provide valuable business insights.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Streamlined Operations",
+            "description": "Efficient sales processing and inventory management that reduces time and improves accuracy."
+          },
+          {
+            "number": "02",
+            "title": "Real-Time Insights",
+            "description": "Comprehensive reporting and analytics that provide valuable insights into business performance."
+          },
+          {
+            "number": "03",
+            "title": "Multi-Location Support",
+            "description": "Centralized management and synchronization across multiple business locations."
+          },
+          {
+            "number": "04",
+            "title": "Custom Features",
+            "description": "Tailored functionality that matches your specific business processes and requirements."
+          }
+        ]
+      }
+    },
+    {
+      "id": "custom-software-development",
+      "title": "Custom Software Development",
+      "description": "Bespoke software solutions for unique business challenges.",
+      "longDescription": "We develop custom software solutions that address your specific business challenges and requirements. Our software development process ensures that you get a solution that perfectly fits your workflow, integrates with existing systems, and scales with your business growth.",
+      "price": "$10,000 - $50,000",
+      "duration": "12-24 weeks",
+      "featured": true,
+      "image": "/images/custom-software-development.jpg",
+      "processSteps": [
+        {
+          "number": "01",
+          "title": "Requirements Engineering",
+          "description": "We conduct comprehensive requirements analysis to understand your business challenges and define the optimal software solution.",
+          "bulletPoints": [
+            "Analyze current business processes and pain points",
+            "Define detailed functional and technical requirements",
+            "Create user stories and acceptance criteria",
+            "Plan system integration and data migration needs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "02",
+          "title": "System Design & Architecture",
+          "description": "We design robust system architecture that ensures scalability, maintainability, and optimal performance.",
+          "bulletPoints": [
+            "Design scalable software architecture",
+            "Plan database schema and data models",
+            "Define API structures and integration points",
+            "Create technical specifications and documentation"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "03",
+          "title": "Agile Development",
+          "description": "We develop your custom software using agile methodology with regular feedback and iterative improvements.",
+          "bulletPoints": [
+            "Implement core business logic and features",
+            "Build user interfaces and experience flows",
+            "Develop data processing and automation",
+            "Create integration modules and APIs"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "04",
+          "title": "Integration & Testing",
+          "description": "We integrate your software with existing systems and conduct comprehensive testing to ensure reliability.",
+          "bulletPoints": [
+            "Integrate with existing business systems",
+            "Perform comprehensive functionality testing",
+            "Conduct security and performance testing",
+            "Execute user acceptance testing"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "05",
+          "title": "Deployment & Migration",
+          "description": "We deploy your custom software and migrate data from existing systems with minimal business disruption.",
+          "bulletPoints": [
+            "Deploy software to production environment",
+            "Migrate data from legacy systems",
+            "Configure monitoring and backup systems",
+            "Implement security and access controls"
+          ],
+          "image": "/images/processa12 1.png"
+        },
+        {
+          "number": "06",
+          "title": "Training & Support",
+          "description": "We provide comprehensive training and establish ongoing support to ensure successful software adoption.",
+          "bulletPoints": [
+            "Provide comprehensive user training",
+            "Create detailed documentation and manuals",
+            "Establish support and maintenance procedures",
+            "Plan future enhancements and updates"
+          ],
+          "image": "/images/processa12 1.png"
+        }
+      ],
+      "processHeader": {
+        "title": "Our Custom Software Development Process",
+        "subtitle": "Creating bespoke software solutions that solve unique business challenges."
+      },
+      "whyYourBusinessNeeds": {
+        "paragraph": "Custom software development provides solutions perfectly tailored to your business needs and processes. Professional development ensures optimal workflow automation, seamless system integration, and competitive advantages that off-the-shelf software cannot provide.",
+        "cards": [
+          {
+            "number": "01",
+            "title": "Perfect Workflow Match",
+            "description": "Software designed specifically for your business processes, improving efficiency and productivity."
+          },
+          {
+            "number": "02",
+            "title": "Competitive Advantage",
+            "description": "Unique capabilities and features that differentiate your business in the marketplace."
+          },
+          {
+            "number": "03",
+            "title": "Seamless Integration",
+            "description": "Perfect integration with existing systems and databases without compatibility issues."
+          },
+          {
+            "number": "04",
+            "title": "Complete Ownership",
+            "description": "Full ownership and control over your software with no vendor lock-in or licensing restrictions."
+          }
+        ]
+      }
+  ]
+}

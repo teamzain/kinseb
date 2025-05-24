@@ -1,0 +1,52 @@
+/* Faster loading transition styles */
+.content-loading {
+  opacity: 0;
+}
+
+.content-loaded {
+  opacity: 1;
+  transition: opacity 0.2s ease-out; /* Reduced from 0.5s to 0.2s */
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* Simplified skeleton loader */
+.skeleton-loader {
+  width: 100%;
+  padding: 10px;
+}
+
+.skeleton-header {
+  height: 30px;
+  margin-bottom: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.skeleton-line {
+  height: 15px;
+  width: 60%;
+  margin-bottom: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Remove animation for faster performance if needed */
+/*
+.skeleton-header, .skeleton-line {
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+*/
