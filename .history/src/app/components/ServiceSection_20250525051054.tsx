@@ -113,7 +113,11 @@ const serviceCards: ServiceCardData[] = [
     title: 'Custom Website Design',
     description: 'Tailor-made websites built around your unique goals.'
   },
-
+  {
+    id: "shopify-website-design",
+    title: 'Shopify Website Design',
+    description: 'High-converting Shopify stores with custom design solutions.'
+  },
   {
     id: "wordpress-web-design",
     title: 'WordPress Web Design',

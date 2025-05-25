@@ -712,14 +712,13 @@ const handleQuoteClick = () => {
             height: auto;
             min-height: 100vh;
             padding-bottom: 2rem;
-           
+             margin-top: 2rem;
           }
 
           .content-wrapper {
             padding: 0 2rem;
             justify-content: flex-start;
             gap: 2rem;
-              margin-top: 2rem;
           }
 
           .project-showcase {

@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Poppins, Lato, Barlow } from 'next/font/google';
 import Image from 'next/image';
@@ -14,7 +13,6 @@ const poppins = Poppins({
   preload: true,
 });
 
-// Note: Lato only supports weights 100, 300, 400, 700, 900 in Next.js
 const lato = Lato({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -66,20 +64,16 @@ interface Service {
   processSteps: ProcessStep[];
   processHeader: ProcessHeader;
   whyYourBusinessNeeds: WhyYourBusinessNeeds;
-  // Make FAQ optional since it might not exist in all services
   faq?: FaqItem[];
-  // Optional legacy properties for backward compatibility
   deliverables?: string[];
   process?: string[];
 }
 
-// Props interface for the component
 interface ContactForm2Props {
   serviceId: string;
 }
 
 export default function ContactForm2({ serviceId }: ContactForm2Props) {
-  // Form state management with useMemo for initial state
   interface FormData {
     fullName: string;
     email: string;
@@ -98,19 +92,21 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
   
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [animateElements, setAnimateElements] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
   
   // Find the current service data from services.json
   const currentService = useMemo(() => {
-    // First try to find by string ID matching
     let service = servicesData.services.find((service: any) => service.id === serviceId);
     
-    // If not found and serviceId is numeric, try converting to number
     if (!service && !isNaN(Number(serviceId))) {
       const numericId = Number(serviceId);
       service = servicesData.services.find((service: any) => Number(service.id) === numericId);
     }
     
-    // Return found service or default to first service
     return service || servicesData.services[0];
   }, [serviceId]);
   
@@ -130,21 +126,16 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
     };
   }, [currentService, serviceId]);
 
-  // FAQ sections expanded state
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   
-  // Animation triggers with refs for intersection observer
   const leftContentRef = useRef(null);
   const formContainerRef = useRef(null);
 
-  // Handle animation on component mount with useEffect
   useEffect(() => {
-    // Trigger initial animations after a short delay
     const timer = setTimeout(() => {
       setAnimateElements(true);
     }, 100);
 
-    // Set up intersection observer for scroll animations
     const observerOptions: IntersectionObserverInit = {
       root: null,
       rootMargin: '0px',
@@ -161,7 +152,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     
-    // Observe all animated elements
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach((el) => observer.observe(el));
 
@@ -172,26 +162,102 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
     };
   }, []);
 
-  // Toggle FAQ section expansion
   const toggleSection = useCallback((sectionId: string) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   }, [expandedSection]);
 
-  // Optimize form input handling with useCallback
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
-  }, []);
+    // Clear any previous error messages when user starts typing
+    if (submitStatus.type === 'error') {
+      setSubmitStatus({ type: null, message: '' });
+    }
+  }, [submitStatus.type]);
 
-  // Form submission handler
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+  // Enhanced form submission handler with API integration
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // Here you would add your API call to send the form data
-  }, [formData]);
+    
+    // Basic client-side validation
+    if (!formData.fullName.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please fill in all required fields (Name, Email, and Message).'
+      });
+      return;
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please enter a valid email address.'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      // Prepare data to send including service information
+      const submissionData = {
+        ...formData,
+        // Include service data for the email
+        serviceInfo: {
+          id: currentService.id,
+          title: currentService.title,
+          description: currentService.description,
+          price: currentService.price,
+          duration: currentService.duration
+        },
+        submittedAt: new Date().toISOString()
+      };
+
+      console.log('Submitting form data:', submissionData);
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+        });
+        
+        // Reset form after successful submission
+        setFormData(initialFormData);
+        
+        // Auto-clear success message after 10 seconds
+        setTimeout(() => {
+          setSubmitStatus({ type: null, message: '' });
+        }, 10000);
+        
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Failed to send message. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [formData, currentService, initialFormData]);
 
   // Generate structured data for SEO
   const structuredData = useMemo(() => ({
@@ -232,7 +298,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
 
   return (
     <>
-      {/* SEO Meta Tags */}
       <Head>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -241,7 +306,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
         <meta name="author" content="Your Company Name" />
         <link rel="canonical" href={`https://kinsebwebdevelopment.com${seoData.canonical}`} />
         
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={seoData.ogTitle} />
         <meta property="og:description" content={seoData.ogDescription} />
         <meta property="og:image" content={seoData.ogImage} />
@@ -250,7 +314,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
         <meta property="og:site_name" content="Your Company Name" />
         <meta property="og:locale" content="en_US" />
         
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.ogTitle} />
         <meta name="twitter:description" content={seoData.ogDescription} />
@@ -258,14 +321,12 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
         <meta name="twitter:site" content="@yourcompany" />
         <meta name="twitter:creator" content="@yourcompany" />
         
-        {/* Additional SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="theme-color" content="#0D98BA" />
         
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -281,14 +342,12 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
       </Head>
 
       <main className="landing-container" role="main">
-        {/* Left side content with services */}
         <section 
           className={`left-content ${animateElements ? 'animate' : ''}`} 
           ref={leftContentRef}
           aria-labelledby="service-title"
         >
           <div className="content-wrapper">
-            {/* Header content section */}
             <header className="header-content">
               <h1 id="service-title" className={`main-heading ${poppins.className} animate-item`}>
                 {currentService.title.includes('Design') ? (
@@ -307,7 +366,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
               </p>
             </header>
             
-            {/* FAQ sections with proper semantics - Only show if FAQ data exists */}
             {currentService.faq && Array.isArray(currentService.faq) && currentService.faq.length > 0 ? (
               <section className="faq-container animate-on-scroll" aria-labelledby="faq-heading">
                 <h2 id="faq-heading" className="sr-only">Frequently Asked Questions</h2>
@@ -353,7 +411,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                 ))}
               </section>
             ) : (
-              /* Alternative content when no FAQ data is available */
               <section className="info-container animate-on-scroll" aria-labelledby="service-info-heading">
                 <h2 id="service-info-heading" className="sr-only">Service Information</h2>
                 <div className="info-item">
@@ -385,7 +442,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
           </div>
         </section>
 
-        {/* Right side - Contact Form with proper semantics */}
         <section 
           className={`form-container ${animateElements ? 'animate' : ''}`}
           ref={formContainerRef}
@@ -394,6 +450,17 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
           <h2 id="contact-form-title" className={`form-heading ${poppins.className} animate-item`}>
             Start a Conversation
           </h2>
+          
+          {/* Status messages */}
+          {submitStatus.type && (
+            <div 
+              className={`status-message ${submitStatus.type}`}
+              role={submitStatus.type === 'error' ? 'alert' : 'status'}
+              aria-live="polite"
+            >
+              {submitStatus.message}
+            </div>
+          )}
           
           <form 
             onSubmit={handleSubmit} 
@@ -433,6 +500,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                     aria-required="true"
                     aria-describedby="fullName-error"
                     autoComplete="name"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -464,6 +532,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                     aria-required="true"
                     aria-describedby="email-error"
                     autoComplete="email"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -494,6 +563,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                     value={formData.companyName}
                     onChange={handleChange}
                     autoComplete="organization"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -522,6 +592,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                     value={formData.contactNumber}
                     onChange={handleChange}
                     autoComplete="tel"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -542,16 +613,18 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
                 required
                 aria-required="true"
                 aria-describedby="message-error"
+                disabled={isSubmitting}
               />
             </div>
 
             <button 
               type="submit" 
-              className={`submit-button ${barlow.className} animate-item`}
+              className={`submit-button ${barlow.className} animate-item ${isSubmitting ? 'submitting' : ''}`}
               style={{ animationDelay: '500ms' }}
               aria-describedby="submit-description"
+              disabled={isSubmitting}
             >
-              Get in Touch
+              {isSubmitting ? 'Sending...' : 'Get in Touch'}
             </button>
             <p id="submit-description" className="sr-only">
               Submit the form to start your {currentService.title.toLowerCase()} consultation
@@ -559,9 +632,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
           </form>
         </section>
 
-        {/* CSS Styles */}
         <style jsx>{`
-          /* Accessibility helper class */
           .sr-only {
             position: absolute;
             width: 1px;
@@ -572,6 +643,40 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
             border: 0;
+          }
+
+          /* Status message styles */
+          .status-message {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            font-weight: 500;
+            animation: slideIn 0.3s ease-out;
+          }
+
+          .status-message.success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+          }
+
+          .status-message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+          }
+
+          @keyframes slideIn {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
 
           /* Base Styles */
@@ -590,7 +695,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             overflow: hidden;
           }
 
-          /* Animation classes */
           @keyframes fadeInUp {
             from {
               opacity: 0;
@@ -625,16 +729,13 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
           .left-content.animate .animate-item:nth-child(1) {
             animation-delay: 0.1s;
           }
-
           .left-content.animate .animate-item:nth-child(2) {
             animation-delay: 0.2s;
           }
-
           .left-content.animate .animate-item:nth-child(3) {
             animation-delay: 0.3s;
           }
 
-          /* Scroll animation handling */
           .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
@@ -646,7 +747,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             transform: translateY(0);
           }
 
-          /* Left Content Styles - Restructured for FAQ */
           .left-content {
             flex: 1;
             max-width: 50%;
@@ -667,7 +767,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             gap: 2rem;
           }
 
-          /* Header section at top - Updated to stack title and description */
           .header-content {
             padding-top: 1.5rem;
             display: flex;
@@ -675,35 +774,31 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             width: 100%;
           }
 
-      /* Replace the existing .main-heading style with this: */
-.main-heading {
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  line-height: 1.3;
-  color: #FFFFFF;
-  margin: 0 0 1rem 0; /* Changed from -3.3rem to 1rem */
-  width: 100%;
-  order: 1; /* Desktop: title first */
-}
+          .main-heading {
+            font-weight: 600;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.3;
+            color: #FFFFFF;
+            margin: 0 0 1rem 0;
+            width: 100%;
+            order: 1;
+          }
 
-/* Also update the .description margin for better spacing: */
-.description {
-  font-weight: 600;
-  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-  line-height: 1.5;
-  color: #FFFFFF;
-  margin: 0 0 1.5rem 0; /* Keep this as is */
-  width: 100%;
-  max-width: 100%;
-  order: 2; /* Desktop: description second */
-}
+          .description {
+            font-weight: 600;
+            font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+            line-height: 1.5;
+            color: #FFFFFF;
+            margin: 0 0 1.5rem 0;
+            width: 100%;
+            max-width: 100%;
+            order: 2;
+          }
+
           .blue-text {
             color: #0D98BA;
           }
 
-      
-
-          /* FAQ Styles - Enhanced for smoother animations */
           .faq-container,
           .info-container {
             display: flex;
@@ -753,11 +848,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             background: rgba(13, 152, 186, 0.15);
           }
 
-          .faq-header:focus {
-            // outline: 2px solid #0D98BA;
-            // outline-offset: 2px;
-          }
-
           .faq-title,
           .info-title {
             font-weight: 600;
@@ -796,7 +886,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             stroke: #3DB4D0;
           }
 
-          /* Enhanced smooth FAQ content animation */
           .faq-content,
           .info-content {
             overflow: hidden;
@@ -848,7 +937,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             transition: color 0.3s ease;
           }
 
-          /* Form Container Styles */
           .form-container {
             flex: 1;
             max-width: 50%;
@@ -871,7 +959,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             margin: 0 0 1.5rem 0;
           }
 
-          /* Form Styles */
           .contact-form {
             width: 100%;
             display: flex;
@@ -957,6 +1044,11 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             color: #98989A;
           }
 
+          .form-input:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+
           .form-textarea {
             width: 100%;
             min-height: 5.5rem;
@@ -984,6 +1076,11 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             transform: translateY(-2px);
           }
 
+          .form-textarea:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+
           .submit-button {
             width: 145px;
             height: 48px;
@@ -1004,7 +1101,16 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             overflow: hidden;
           }
 
-          /* Button hover effect */
+          .submit-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+          }
+
+          .submit-button.submitting {
+            background: #0B86A5;
+          }
+
           .submit-button:before {
             content: '';
             position: absolute;
@@ -1016,13 +1122,13 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             transition: width 0.3s ease;
           }
 
-          .submit-button:hover {
+          .submit-button:hover:not(:disabled) {
             background: #0B86A5;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(13, 152, 186, 0.3);
           }
 
-          .submit-button:hover:before {
+          .submit-button:hover:not(:disabled):before {
             width: 100%;
           }
 
@@ -1031,7 +1137,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             outline-offset: 2px;
           }
 
-          /* Responsive Styles - Enhanced for all screen sizes */
           @media (max-width: 1200px) {
             .landing-container {
               padding: 1.5rem;
@@ -1076,7 +1181,7 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
               flex: none;
               width: 100%;
               padding-bottom: 1rem;
-              order: 1; /* Display content first on mobile */
+              order: 1;
             }
             
             .form-container {
@@ -1085,26 +1190,25 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
               width: 100%;
               min-height: auto;
               padding: 2rem 1.75rem;
-              order: 2; /* Display form below content on mobile */
+              order: 2;
             }
             
             .faq-container {
               margin-top: 1rem;
             }
 
-            /* Mobile: Swap order of title and description */
             .header-content {
               flex-direction: column-reverse;
             }
             
             .main-heading {
-              order: 2; /* Mobile: title second */
-              margin: 1rem 0 0 0; /* Adjust margins for new order */
+              order: 2;
+              margin: 1rem 0 0 0;
             }
             
             .description {
-              order: 1; /* Mobile: description first */
-              margin: 0 0 0 0; /* Remove bottom margin since title comes after */
+              order: 1;
+              margin: 0 0 0 0;
             }
           }
 
@@ -1126,7 +1230,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
               padding: 1.75rem 1.5rem;
             }
             
-            /* Simplify animations on smaller screens for performance */
             .animate-item {
               animation-duration: 0.5s !important;
             }
@@ -1162,14 +1265,12 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
               font-size: 1.125rem;
             }
             
-            /* Simplify animations further for smallest screens */
             .left-content.animate .animate-item,
             .form-container.animate .animate-item {
               animation-duration: 0.4s;
             }
           }
 
-          /* Reduce motion for users who prefer it */
           @media (prefers-reduced-motion: reduce) {
             .animate-item,
             .animate-on-scroll,
@@ -1184,7 +1285,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             }
           }
 
-          /* High contrast mode support */
           @media (prefers-contrast: high) {
             .faq-header:focus {
               outline: 3px solid #FFFFFF;
@@ -1200,7 +1300,6 @@ export default function ContactForm2({ serviceId }: ContactForm2Props) {
             }
           }
 
-          /* Print styles */
           @media print {
             .landing-container {
               background: white !important;

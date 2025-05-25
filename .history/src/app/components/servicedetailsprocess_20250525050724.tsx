@@ -2648,7 +2648,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
         ...styles,
         container: {
           ...styles.container,
-          height: '78vh',
+          height: 'auto',
           padding: '40px 0 50px'
         },
         header: {
@@ -2807,7 +2807,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
       style={{
         position: 'relative',
         width: '100%',
-        height: deviceType === 'mobile' ? '83vh' : deviceType === 'tablet' ? '43vh' : '89vh',
+        height: deviceType === 'mobile' ? '83vh' : deviceType === 'tablet' ? 'auto' : '89vh',
       }}
       aria-labelledby="web-design-process-heading"
       itemScope
@@ -3057,7 +3057,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
                       width: styles.stepContainer.width,
                       padding: styles.stepContainer.padding,
                       flexShrink: 0,
-                      marginBottom: deviceType === 'mobile' ? '20px' : deviceType === 'tablet' ? '0px' : '0',
+                      marginBottom: deviceType === 'mobile' ? '20px' : deviceType === 'tablet' ? '10px' : '0',
                       animation: `fade-in 0.5s ease-in-out`,
                     }}
                   >

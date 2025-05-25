@@ -2648,7 +2648,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
         ...styles,
         container: {
           ...styles.container,
-          height: '78vh',
+          height: 'auto',
           padding: '40px 0 50px'
         },
         header: {
@@ -2725,8 +2725,8 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
         ...styles,
         container: {
           ...styles.container,
-          height: '120vh',
-          padding: '60px 0'
+          height: '200vh',
+          padding: '80px 0'
         },
         header: {
           marginBottom: '0px'
@@ -2736,8 +2736,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
           lineHeight: '1.1'
         },
         content: {
-          marginTop: '10px',
-          
+          marginTop: '10px'
         },
         stepContainer: {
           ...styles.stepContainer,
@@ -2807,7 +2806,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
       style={{
         position: 'relative',
         width: '100%',
-        height: deviceType === 'mobile' ? '83vh' : deviceType === 'tablet' ? '43vh' : '89vh',
+        height: deviceType === 'mobile' ? 'auto' : deviceType === 'tablet' ? 'auto' : '85vh',
       }}
       aria-labelledby="web-design-process-heading"
       itemScope
@@ -3057,7 +3056,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
                       width: styles.stepContainer.width,
                       padding: styles.stepContainer.padding,
                       flexShrink: 0,
-                      marginBottom: deviceType === 'mobile' ? '20px' : deviceType === 'tablet' ? '0px' : '0',
+                      marginBottom: deviceType === 'mobile' ? '20px' : deviceType === 'tablet' ? '10px' : '0',
                       animation: `fade-in 0.5s ease-in-out`,
                     }}
                   >

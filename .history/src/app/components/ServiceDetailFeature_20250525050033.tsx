@@ -44,9 +44,7 @@ const FeaturedWorkShowcase: React.FC<FeaturedWorkProps> = ({ serviceId, backgrou
   const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
-const handleQuoteClick = () => {
-  router.push('/contact');
-};
+
   // Check if device is mobile
   useEffect(() => {
     const checkMobile = () => {
@@ -161,10 +159,10 @@ const handleQuoteClick = () => {
           <div className={`project-info ${isAnimating ? 'animate-fade-in' : ''} ${isVisible ? 'animate-in' : ''}`}>
             <h3 className="project-title">{currentProject.title}</h3>
             <p className="project-description">{currentProject.description}</p>
-     <button className="quote-button" onClick={handleQuoteClick}>
-  <span className="button-text">Request A Quote</span>
-  <span className="button-hover-effect"></span>
-</button>
+            <button className="quote-button">
+              <span className="button-text">Request A Quote</span>
+              <span className="button-hover-effect"></span>
+            </button>
           </div>
 
           <div className={`project-image ${isAnimating ? 'animate-slide-in' : ''} ${isVisible ? 'animate-in' : ''}`}>
@@ -712,14 +710,12 @@ const handleQuoteClick = () => {
             height: auto;
             min-height: 100vh;
             padding-bottom: 2rem;
-           
           }
 
           .content-wrapper {
             padding: 0 2rem;
             justify-content: flex-start;
             gap: 2rem;
-              margin-top: 2rem;
           }
 
           .project-showcase {

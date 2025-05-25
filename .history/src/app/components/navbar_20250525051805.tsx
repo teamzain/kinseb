@@ -1824,7 +1824,18 @@ const Navbar = () => {
                     Custom Website Design
                   </Link>
                 </div>
-        
+                <div className="service-slider-item">
+                  <Link 
+                    href="/services/shopify-website-design" 
+                    className="service-slider-link"
+                    onClick={() => {
+                      handleLinkClick('services');
+                      closeServiceSlider();
+                    }}
+                  >
+                    Shopify Website Design
+                  </Link>
+                </div>
                 <div className="service-slider-item">
                   <Link 
                     href="/services/ecommerce-web-design" 

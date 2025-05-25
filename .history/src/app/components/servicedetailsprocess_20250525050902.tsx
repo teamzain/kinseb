@@ -2648,7 +2648,7 @@ const WebDesignProcess: React.FC<WebDesignProcessProps> = ({ serviceId }) => {
         ...styles,
         container: {
           ...styles.container,
-          height: '78vh',
+          height: 'auto',
           padding: '40px 0 50px'
         },
         header: {
